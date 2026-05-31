@@ -1,0 +1,1 @@
+Replace public/og-image.jpg with a 1200x630 image for Open Graph.

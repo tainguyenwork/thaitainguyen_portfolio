@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thai Tai Nguyen — Fashion Design Portfolio
+
+A luxury editorial fashion portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and shadcn/ui.
+
+## Features
+
+- Editorial luxury aesthetic (COS / Acne Studios inspired)
+- Fully responsive, mobile-first layout
+- Dark mode support
+- Project filtering and detailed case study pages
+- SEO metadata, Open Graph, sitemap, and structured data
+- Framer Motion animations (fade up, scroll reveal, image zoom)
+- Scroll progress indicator and back-to-top button
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion**
+- **shadcn/ui** components
+- **Lucide Icons**
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customize
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Personal info** — Edit `src/lib/site-config.ts` with your email, LinkedIn, Behance, and GitHub URLs.
+2. **Images** — Replace SVG placeholders in `public/images/` with your project photography and renders.
+3. **Resume PDF** — Replace `public/resume/thai-tai-nguyen-resume.pdf` with your actual CV.
+4. **OG image** — Add `public/og-image.jpg` (1200×630) and update `ogImage` in site config.
+5. **Deploy URL** — Update `siteConfig.url` for production SEO.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/              # Pages (Home, About, Projects, Experience, Resume, Contact)
+├── components/       # UI, layout, motion, project, skills, contact
+├── data/             # Projects, experience, skills, resume content
+└── lib/              # Utils, metadata, site config
+public/
+├── images/           # Project and editorial images
+└── resume/           # Downloadable PDF
+```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this repository to GitHub.
+2. Import the project in [Vercel](https://vercel.com).
+3. Deploy — no extra configuration required.
+
+## Scripts
+
+| Command        | Description          |
+| -------------- | -------------------- |
+| `npm run dev`  | Development server   |
+| `npm run build`| Production build     |
+| `npm run start`| Production server    |
+| `npm run lint` | ESLint               |
+
+## License
+
+Private portfolio — all rights reserved.
