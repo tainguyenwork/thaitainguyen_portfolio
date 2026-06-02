@@ -8,7 +8,7 @@ import { ProjectFilter } from "@/components/projects/project-filter";
 import { projects, type ProjectCategory } from "@/data/projects";
 
 export default function ProjectsPage() {
-  const featured = projects.filter(() => true);
+  const [filter, setFilter] = useState<ProjectCategory>("all");
 
   const filtered = useMemo(() => {
     if (filter === "all") return projects;
