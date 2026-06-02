@@ -43,21 +43,35 @@ export default function AboutPage() {
       <section className="border-b border-neutral-200 py-24 dark:border-neutral-800 md:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeUp>
-            <SectionHeading
-              label="About"
-              title={siteConfig.name}
-              description={siteConfig.tagline}
-            />
+          <SectionHeading
+  label="About"
+  title={siteConfig.name}
+/>  
           </FadeUp>
-          <FadeUp delay={0.15} className="mt-16 max-w-3xl">
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              I am a fashion design student and technical apparel designer based
-              in {siteConfig.location}. My work sits at the intersection of
-              creative direction and garment engineering — developing collections
-              and technical projects that speak to internship panels, product
-              development teams, and university portfolio reviewers across Germany
-              and Taiwan.
-            </p>
+          <FadeUp delay={0.15} className="mt-16 max-w-5xl">
+          <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+  <p>
+    Hi, I'm Thai Tai Nguyen, a Fashion Design student with a strong interest in
+    technical apparel development, digital prototyping, and garment engineering.
+    My work focuses on bridging creativity and functionality through the use of
+    CLO3D, Gerber AccuMark, and contemporary design methodologies.
+  </p>
+
+  <p>
+    I am particularly interested in translating concepts into production-ready
+    garments, exploring the relationship between silhouette, materials,
+    construction, and digital workflows. Through projects ranging from technical
+    outerwear to conceptual womenswear, I aim to create designs that are both
+    visually compelling and technically refined.
+  </p>
+
+  <p>
+    Currently, I am expanding my expertise in fashion design, 3D garment
+    visualization, pattern development, and apparel product development while
+    pursuing opportunities to contribute to innovative and forward-thinking
+    fashion teams.
+  </p>
+</div>
           </FadeUp>
         </div>
       </section>
