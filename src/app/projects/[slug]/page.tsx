@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { FadeUp } from "@/components/motion/fade-up";
 import { ImageZoom } from "@/components/motion/image-zoom";
+import { ProjectCaseStudy } from "@/components/projects/project-case-study";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -32,6 +33,12 @@ export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+
+  const hasReflectionSection = project.caseStudy?.some(
+    (s) => s.id === "reflection",
+  );
+  const legacyReflection =
+    project.reflection && !hasReflectionSection ? project.reflection : null;
 
   return (
     <article className="pb-24 md:pb-32">
@@ -62,7 +69,10 @@ export default async function ProjectDetailPage({ params }: Props) {
             </div>
           </FadeUp>
         </div>
-        <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-8" id="hero-image">
+          <p className="mb-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+            Hero Image
+          </p>
           <ImageZoom
             src={project.heroImage}
             alt={project.title}
@@ -135,32 +145,8 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
-      {project.sections && (
-        <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="space-y-24">
-              {project.sections.map((section, i) => (
-                <FadeUp key={section.title} delay={i * 0.05}>
-                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-                    <div>
-                      <h2 className="font-serif text-3xl">{section.title}</h2>
-                      <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                        {section.content}
-                      </p>
-                    </div>
-                    {section.images?.[0] && (
-                      <ImageZoom
-                        src={section.images[0].src}
-                        alt={section.images[0].alt}
-                        aspectRatio="4/3"
-                      />
-                    )}
-                  </div>
-                </FadeUp>
-              ))}
-            </div>
-          </div>
-        </section>
+      {project.caseStudy && project.caseStudy.length > 0 && (
+        <ProjectCaseStudy sections={project.caseStudy} />
       )}
 
       <section className="py-16 md:py-24">
@@ -213,7 +199,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
-      {(project.lessons || project.reflection) && (
+      {(project.lessons || legacyReflection) && (
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid gap-16 lg:grid-cols-2">
@@ -232,11 +218,11 @@ export default async function ProjectDetailPage({ params }: Props) {
                   </ul>
                 </FadeUp>
               )}
-              {project.reflection && (
+              {legacyReflection && (
                 <FadeUp delay={0.1}>
                   <h2 className="font-serif text-3xl">Reflection</h2>
                   <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                    {project.reflection}
+                    {legacyReflection}
                   </p>
                 </FadeUp>
               )}

@@ -34,6 +34,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 1. **Personal info** — Edit `src/lib/site-config.ts` with your email, LinkedIn, Behance, and GitHub URLs.
 2. **Images** — Replace SVG placeholders in `public/images/` with your project photography and renders.
+   - **Hero:** `public/images/projects/{slug}/hero.jpg` (or `.png`) — set `heroImage` in `src/data/projects.ts`
+   - **Case study sections:** add images per section in `caseStudy[].images` (e.g. moodboard, color story, CLO3D). See `spring-summer-evening-gown` in `src/data/projects.ts` for the full section list (Overview, Research, Moodboard, Color Story, Material Selection, Technical Flats, Final Outcome, Reflection).
 3. **Resume PDF** — Replace `public/resume/thai-tai-nguyen-resume.pdf` with your actual CV.
 4. **OG image** — Add `public/og-image.jpg` (1200×630) and update `ogImage` in site config.
 5. **Deploy URL** — Update `siteConfig.url` for production SEO.

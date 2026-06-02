@@ -1,3 +1,5 @@
+import type { ProjectCaseStudySection } from "@/data/project-sections";
+
 export type ProjectCategory =
   | "technical"
   | "womenswear"
@@ -15,16 +17,14 @@ export type Project = {
   coverImage: string;
   heroImage: string;
   gallery: { src: string; alt: string; caption?: string }[];
+  /** Ordered case-study sections (Overview → Reflection) */
+  caseStudy?: ProjectCaseStudySection[];
   objectives?: string[];
   process?: string[];
   software?: string[];
   metrics?: { label: string; value: string }[];
   lessons?: string[];
-  sections?: {
-    title: string;
-    content: string;
-    images?: { src: string; alt: string }[];
-  }[];
+  /** @deprecated Use caseStudy with id "reflection" */
   reflection?: string;
 };
 
@@ -90,8 +90,85 @@ export const projects: Project[] = [
       "Outdoor garments require articulated pattern engineering at key stress points.",
       "Clear tech pack communication bridges design intent and factory execution.",
     ],
-    reflection:
-      "This project strengthened my ability to move from concept to production-ready documentation, combining creative direction with the precision required for technical apparel roles.",
+    caseStudy: [
+      {
+        id: "overview",
+        content:
+          "This case study documents the end-to-end development of a men's outdoor jacket, from market research through digital simulation and industrial pattern engineering to production-ready documentation.",
+        images: [
+          {
+            src: "/images/projects/jacket/hero.svg",
+            alt: "Men's outdoor jacket hero",
+            caption: "Project hero — technical outdoor jacket",
+          },
+        ],
+      },
+      {
+        id: "research",
+        content:
+          "Research focused on active outdoor use, layering systems, and competitor benchmarks for weather protection, mobility, and durability in similar market segments.",
+        images: [
+          {
+            src: "/images/projects/jacket/gallery-1.svg",
+            alt: "Outdoor jacket research references",
+            caption: "Research & reference analysis",
+          },
+        ],
+      },
+      {
+        id: "technical-flats",
+        content:
+          "Technical flats defined construction zones, seam types, pocket placement, and hardware positions for factory communication and sample development.",
+        images: [
+          {
+            src: "/images/projects/jacket/gallery-1.svg",
+            alt: "Technical flat sketches",
+            caption: "Technical sketch — front & back views",
+          },
+        ],
+      },
+      {
+        id: "clo3d-development",
+        content:
+          "CLO3D simulations validated fit, articulation at stress points, and fabric behavior before physical prototyping, reducing sample iterations.",
+        images: [
+          {
+            src: "/images/projects/jacket/gallery-2.svg",
+            alt: "CLO3D simulation render",
+            caption: "CLO3D digital prototype",
+          },
+        ],
+      },
+      {
+        id: "pattern-development",
+        content:
+          "Gerber AccuMark pattern pieces were developed for industrial production, including grading logic and marker efficiency considerations.",
+        images: [
+          {
+            src: "/images/projects/jacket/gallery-3.svg",
+            alt: "Pattern pieces layout",
+            caption: "Gerber AccuMark pattern development",
+          },
+        ],
+      },
+      {
+        id: "final-outcome",
+        content:
+          "The final outcome combines a production-aligned tech pack, validated digital prototype, and fit documentation ready for factory handoff.",
+        images: [
+          {
+            src: "/images/projects/jacket/gallery-4.svg",
+            alt: "Fit evaluation documentation",
+            caption: "Fit evaluation & construction notes",
+          },
+        ],
+      },
+      {
+        id: "reflection",
+        content:
+          "This project strengthened my ability to move from concept to production-ready documentation, combining creative direction with the precision required for technical apparel roles.",
+      },
+    ],
   },
   {
     id: "2",
@@ -126,45 +203,97 @@ export const projects: Project[] = [
         caption: "Final design renderings",
       },
     ],
-    sections: [
+    caseStudy: [
       {
-        title: "Moodboard",
+        id: "overview",
         content:
-          "Research drew from botanical forms, natural light, and refined evening wear references to establish an editorial yet wearable direction.",
-        images: [
-          { src: "/images/projects/gown/gallery-1.svg", alt: "Moodboard" },
-        ],
-      },
-      {
-        title: "Color Story",
-        content:
-          "A restrained palette of ivory, blush, sage, and deep charcoal supports seasonal freshness while maintaining luxury restraint.",
-        images: [
-          { src: "/images/projects/gown/gallery-2.svg", alt: "Color story" },
-        ],
-      },
-      {
-        title: "Silhouette Development",
-        content:
-          "Explored column, A-line, and draped bodice proportions to balance movement with structural clarity for evening contexts.",
+          "A spring–summer evening wear collection exploring elegance through proportion, surface, and restrained color — developed from research through final design presentation.",
         images: [
           {
-            src: "/images/projects/gown/gallery-3.svg",
-            alt: "Silhouette sketches",
+            src: "/images/projects/gown/hero.png",
+            alt: "Evening gown collection overview",
+            caption: "Collection overview",
           },
         ],
       },
       {
-        title: "Technical Drawings & Final Designs",
+        id: "research",
         content:
-          "Technical flats documented construction zones, seam placement, and finishing standards alongside final illustrated designs.",
+          "Primary research examined seasonal evening wear, runway references, and target wearer contexts to define a clear design direction for the collection.",
         images: [
-          { src: "/images/projects/gown/gallery-4.svg", alt: "Final designs" },
+          {
+            src: "/images/projects/gown/gallery-1.svg",
+            alt: "Research board",
+            caption: "Research references",
+          },
         ],
       },
+      {
+        id: "moodboard",
+        content:
+          "The moodboard draws from botanical forms, natural light, and refined evening wear references to establish an editorial yet wearable direction.",
+        images: [
+          {
+            src: "/images/projects/gown/gallery-1.svg",
+            alt: "Collection moodboard",
+            caption: "Moodboard — spring summer inspiration",
+          },
+        ],
+      },
+      {
+        id: "color-story",
+        content:
+          "A restrained palette of ivory, blush, sage, and deep charcoal supports seasonal freshness while maintaining luxury restraint.",
+        images: [
+          {
+            src: "/images/projects/gown/gallery-2.svg",
+            alt: "Color story palette",
+            caption: "Color story development",
+          },
+        ],
+      },
+      {
+        id: "material-selection",
+        content:
+          "Fabric and trim selection prioritized drape, hand-feel, and evening-appropriate weight — balancing visual lightness with structural support at key zones.",
+        images: [
+          {
+            src: "/images/projects/gown/gallery-2.svg",
+            alt: "Material swatches",
+            caption: "Material & trim selection",
+          },
+        ],
+      },
+      {
+        id: "technical-flats",
+        content:
+          "Technical flats documented construction zones, seam placement, and finishing standards for each silhouette in the range.",
+        images: [
+          {
+            src: "/images/projects/gown/gallery-3.svg",
+            alt: "Technical flat drawings",
+            caption: "Technical flats & construction",
+          },
+        ],
+      },
+      {
+        id: "final-outcome",
+        content:
+          "Final designs present the completed evening gown range with illustrated renderings and proportion studies ready for portfolio and academic review.",
+        images: [
+          {
+            src: "/images/projects/gown/gallery-4.svg",
+            alt: "Final evening gown designs",
+            caption: "Final design renderings",
+          },
+        ],
+      },
+      {
+        id: "reflection",
+        content:
+          "The collection reinforced my interest in balancing creative narrative with the technical clarity required for real-world garment development.",
+      },
     ],
-    reflection:
-      "The collection reinforced my interest in balancing creative narrative with the technical clarity required for real-world garment development.",
   },
   {
     id: "3",
@@ -199,30 +328,83 @@ export const projects: Project[] = [
         caption: "Material exploration",
       },
     ],
-    sections: [
+    caseStudy: [
       {
-        title: "Technical Sketches",
+        id: "overview",
+        content:
+          "A series of garment engineering experiments exploring construction, pattern logic, and material performance for technical apparel contexts.",
+        images: [
+          {
+            src: "/images/projects/studies/hero.svg",
+            alt: "Technical apparel studies overview",
+          },
+        ],
+      },
+      {
+        id: "research",
+        content:
+          "Research targeted performance garment categories, factory assembly constraints, and emerging material technologies.",
+        images: [
+          {
+            src: "/images/projects/studies/gallery-1.svg",
+            alt: "Technical research",
+          },
+        ],
+      },
+      {
+        id: "technical-flats",
         content:
           "Detailed flats documenting seam types, topstitching, and functional zones for performance-oriented garments.",
+        images: [
+          {
+            src: "/images/projects/studies/gallery-1.svg",
+            alt: "Technical construction sketch",
+            caption: "Technical sketches",
+          },
+        ],
       },
       {
-        title: "Pattern Engineering",
+        id: "pattern-development",
         content:
           "Studies in panel reduction, articulation, and grading logic for complex outerwear components.",
+        images: [
+          {
+            src: "/images/projects/studies/gallery-2.svg",
+            alt: "Pattern engineering study",
+            caption: "Pattern engineering",
+          },
+        ],
       },
       {
-        title: "Construction Analysis",
-        content:
-          "Breakdown of assembly sequences, reinforcement points, and quality checkpoints for factory communication.",
-      },
-      {
-        title: "Material Exploration",
+        id: "material-selection",
         content:
           "Evaluation of shell fabrics, membranes, and trim compatibility for technical end-use requirements.",
+        images: [
+          {
+            src: "/images/projects/studies/gallery-4.svg",
+            alt: "Material exploration swatches",
+            caption: "Material exploration",
+          },
+        ],
+      },
+      {
+        id: "final-outcome",
+        content:
+          "Synthesized construction analysis and assembly sequences for factory-ready communication.",
+        images: [
+          {
+            src: "/images/projects/studies/gallery-3.svg",
+            alt: "Construction analysis diagram",
+            caption: "Construction analysis",
+          },
+        ],
+      },
+      {
+        id: "reflection",
+        content:
+          "These studies form a laboratory for refining the engineering mindset essential to technical designer and product development roles.",
       },
     ],
-    reflection:
-      "These studies form a laboratory for refining the engineering mindset essential to technical designer and product development roles.",
   },
 ];
 
