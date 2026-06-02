@@ -12,7 +12,8 @@ import { siteConfig } from "@/lib/site-config";
 import { projects } from "@/data/projects";
 
 export default function HomePage() {
-  const featured = projects.filter(p => p.category === "all");
+  const featured = projects.filter(() => true);
+
 
   return (
     <>
