@@ -6,7 +6,7 @@ export const siteConfig = {
   shortStatement:
     "Bridging creativity and garment engineering through CLO3D, Gerber AccuMark, and apparel product development.",
   location: "Ho Chi Minh City, Vietnam",
-  email: "your.email@example.com",
+  email: "nguyenthaitai.work@gmail.com",
   linkedin: "https://linkedin.com/in/your-profile",
   github: "https://github.com/your-username",
   behance: "https://behance.net/your-profile",
