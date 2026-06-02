@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-config";
 import { projects } from "@/data/projects";
 
 export default function HomePage() {
-  const featured = projects.slice(0, 2);
+  const featured = projects.filter(p => p.category === "all");
 
   return (
     <>
@@ -73,7 +73,16 @@ export default function HomePage() {
           >
             {siteConfig.shortStatement}
           </motion.p>
-
+      <motion.div
+                className="mt-6 flex gap-6 text-sm text-muted-foreground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                <p>• CLO3D + Gerber workflow</p>
+                <p>• Outdoor & Technical Apparel</p>
+                <p>• 3+ Real Development Projects</p>
+        </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,7 +99,9 @@ export default function HomePage() {
               <Link href="/contact">Contact Me</Link>
             </Button>
           </motion.div>
-
+          <Button variant="ghost" asChild>
+  <Link href="/projects">Explore Case Studies →</Link>
+</Button>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -112,6 +123,9 @@ export default function HomePage() {
               description="Case studies spanning technical outdoor development, conceptual womenswear, and garment engineering studies."
             />
           </FadeUp>
+          <div className="mb-10 text-sm text-muted-foreground">
+  Selected projects representing technical execution, garment engineering, and production workflow.
+</div>
           <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-8 lg:gap-16">
             {featured.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />

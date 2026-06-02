@@ -72,37 +72,24 @@ export function Header() {
 
         <div className="flex items-center gap-3">
         <button
-  type="button"
-  onClick={toggleTheme}
-  className="flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-50"
-  aria-label={
-    mounted
-      ? `Switch to ${theme === "light" ? "dark" : "light"} mode`
-      : "Toggle theme"
-  }
->
-  {!mounted ? null : theme === "light" ? (
-    <Moon className="h-4 w-4" />
-  ) : (
-    <Sun className="h-4 w-4" />
-  )}
-</button>
+          type="button"
+          onClick={toggleTheme}
+          className="flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-50"
+          aria-label={
+            mounted
+              ? `Switch to ${theme === "light" ? "dark" : "light"} mode`
+              : "Toggle theme"
+          }
+        >
+          {!mounted ? null : theme === "light" ? (
+            <Moon className="h-4 w-4" />
+          ) : (
+            <Sun className="h-4 w-4" />
+          )}
+        </button>
 
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center md:hidden"
-            onClick={() => setMobileOpen((o) => !o)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
-        </div>
-      </div>
+  </div>
+</div>
 
       <AnimatePresence>
         {mobileOpen && (

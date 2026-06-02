@@ -103,7 +103,7 @@ export const projects: Project[] = [
     category: "womenswear",
     tags: ["Womenswear", "Collection", "Evening Wear"],
     coverImage: "/images/projects/gown/cover.svg",
-    heroImage: "/images/projects/gown/hero.svg",
+    heroImage: "/images/projects/gown/hero.png",
     gallery: [
       {
         src: "/images/projects/gown/gallery-1.svg",
