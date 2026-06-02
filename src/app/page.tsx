@@ -13,8 +13,7 @@ import { projects } from "@/data/projects";
 
 export default function HomePage() {
   const featured = projects.filter(() => true);
-
-
+  
   return (
     <>
       <section className="relative min-h-[92vh] overflow-hidden">
