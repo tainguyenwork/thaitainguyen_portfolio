@@ -29,8 +29,10 @@ export const aboutTimeline: TimelineItem[] = [
     description:
       "Gained hands-on experience in a real production environment, supporting technical development processes and contributing to production-ready documentation and workflow coordination.",
   },
-  year: "2026",
+  {
+    year: "2026",
     title: "Career Development Focus",
     description:
       "Preparing for entry-level roles in fashion design and product development, with emphasis on digital garment workflow and production-ready design thinking.",
+  },
 ];
