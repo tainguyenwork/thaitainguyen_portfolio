@@ -7,26 +7,30 @@ export type TimelineItem = {
 export const aboutTimeline: TimelineItem[] = [
   {
     year: "2022",
-    title: "Fashion Design Foundation",
+    title: "Fashion Design School",
     description:
-      "Began formal training in fashion design with emphasis on illustration, research, and collection thinking.",
+      "Started formal education in fashion design, focusing on foundational skills including illustration, design principles, and introduction to garment construction.",
   },
   {
     year: "2023",
-    title: "Technical Apparel Focus",
+    title: "Design Development & Academic Projects",
     description:
-      "Expanded into garment engineering, pattern development, and digital tools including CLO3D and Gerber AccuMark.",
+      "Focused on developing core design skills through coursework and projects, exploring silhouette development, material research, and early experimentation with digital tools such as CLO3D.",
   },
   {
     year: "2024",
-    title: "Industry Internship",
+    title: "Advanced Design & Digital Workflow Exploration",
     description:
-      "Joined Lotus Textile & Garment Co., Ltd to support technical development and production-ready documentation.",
+      "Continued strengthening technical and creative skills through more complex projects, with deeper involvement in pattern development, digital garment simulation, and concept-to-product thinking.",
   },
   {
-    year: "Present",
-    title: "Product Development Direction",
+    year: "2025",
+    title: "Technical Development Internship at Lotus Textile & Garment Co., Ltd",
     description:
-      "Pursuing roles in apparel product development, technical design, and digital fashion workflows with sustainable awareness.",
+      "Gained hands-on experience in a real production environment, supporting technical development processes and contributing to production-ready documentation and workflow coordination.",
   },
+  year: "2026",
+    title: "Career Development Focus",
+    description:
+      "Preparing for entry-level roles in fashion design and product development, with emphasis on digital garment workflow and production-ready design thinking.",
 ];
