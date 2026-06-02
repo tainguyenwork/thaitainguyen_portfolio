@@ -17,23 +17,23 @@ export const metadata: Metadata = createMetadata({
 const bioTopics = [
   {
     title: "Fashion Design Foundation",
-    text: "Trained in fashion illustration, collection development, and design research with an editorial sensibility rooted in minimalist luxury.",
+    text: "Trained in fashion design, illustration, and collection development, with an interest in transforming concepts into visually compelling garments through research and creative exploration.",
   },
   {
-    title: "Apparel Product Development",
-    text: "Passionate about translating creative concepts into manufacturable garments through tech packs, construction standards, and cross-functional communication.",
+    title: "Garment Construction & Pattern Making",
+    text: "Passionate about understanding how fit, pattern engineering, and construction details contribute to the final quality and functionality of a garment.",
   },
   {
-    title: "Outdoor & Technical Clothing",
-    text: "Drawn to performance-oriented garments where pattern engineering, material selection, and fit analysis converge for real-world function.",
+    title: "Product Development",
+    text: "Interested in the relationship between design and execution, from concept development and material selection to garment construction and production preparation.",
   },
   {
     title: "Digital Fashion Workflow",
-    text: "Proficient in CLO3D simulation and Gerber AccuMark pattern development to accelerate prototyping and improve production alignment.",
+    text: "Experienced in using CLO3D and Gerber AccuMark to support pattern development, digital prototyping, and technical communication throughout the design process.",
   },
   {
-    title: "Sustainable Awareness",
-    text: "Committed to mindful material choices, reduced sample waste through digital tools, and responsible development practices.",
+    title: "Garment Construction & Pattern Making",
+    text: "Passionate about understanding how fit, pattern engineering, and construction details contribute to the final quality and functionality of a garment.",
   },
 ];
 
