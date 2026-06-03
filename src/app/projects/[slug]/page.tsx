@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { FadeUp } from "@/components/motion/fade-up";
 import { ImageZoom } from "@/components/motion/image-zoom";
-import { ProjectCaseStudy } from "@/components/projects/project-case-study";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -144,11 +143,6 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </section>
       )}
-
-      {project.caseStudy && project.caseStudy.length > 0 && (
-        <ProjectCaseStudy sections={project.caseStudy} />
-      )}
-
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeUp>
