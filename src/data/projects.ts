@@ -1,33 +1,3 @@
-import type { ProjectCaseStudySection } from "@/data/project-sections";
-
-export type ProjectCategory =
-  | "technical"
-  | "womenswear"
-  | "experimental"
-  | "all";
-
-export type Project = {
-  id: string;
-  slug: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  category: Exclude<ProjectCategory, "all">;
-  tags: string[];
-  coverImage: string;
-  heroImage: string;
-  gallery: { src: string; alt: string; caption?: string }[];
-  /** Ordered case-study sections (Overview → Reflection) */
-  caseStudy?: ProjectCaseStudySection[];
-  objectives?: string[];
-  process?: string[];
-  software?: string[];
-  metrics?: { label: string; value: string }[];
-  lessons?: string[];
-  /** @deprecated Use caseStudy with id "reflection" */
-  reflection?: string;
-};
-
 export const projects: Project[] = [
   {
     id: "1",
