@@ -25,18 +25,22 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       className="group"
     >
       <Link href={`/projects/${project.slug}`} className="block">
+        {/* IMAGE */}
         <ImageZoom
           src={project.coverImage}
           alt={project.title}
           aspectRatio="4/5"
         />
 
+        {/* CONTENT */}
         <div className="mt-4">
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
             {project.subtitle}
           </p>
 
-          <h3 className="mt-1 font-serif text-2xl">{project.title}</h3>
+          <h3 className="mt-1 font-serif text-2xl">
+            {project.title}
+          </h3>
 
           <p className="mt-2 text-sm text-muted-foreground">
             {project.description}

@@ -8,7 +8,8 @@ type ProjectFilterProps = {
   onChange: (category: ProjectCategory) => void;
 };
 
-export function ProjectFilter({ active, onChange }: ProjectFilterProps) {
+export function ProjectFilter({ active, onChange }: ProjectFilterProps)
+ {
   return (
     <div
       className="flex flex-wrap gap-3"

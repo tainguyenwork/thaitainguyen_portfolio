@@ -16,10 +16,12 @@ export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<any> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
+
   if (!project) return {};
+
   return createMetadata({
     title: project.title,
     description: project.description,
@@ -31,67 +33,73 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
+
   if (!project) notFound();
 
-  const hasReflectionSection = project.caseStudy?.some(
-    (s) => s.id === "reflection",
-  );
-  const legacyReflection =
-    project.reflection && !hasReflectionSection ? project.reflection : null;
-
   return (
-    <article className="pb-24 md:pb-32">
-      <section className="border-b border-neutral-200 dark:border-neutral-800">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-          <Button asChild variant="ghost" size="sm" className="-ml-2">
-            <Link href="/projects">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              All Projects
-            </Link>
-          </Button>
+    <article>
+      {/* BACK */}
+      <section className="py-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <Link href="/projects" className="flex items-center gap-2 text-sm">
+            <ArrowLeft size={16} />
+            All Projects
+          </Link>
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+      </section>
+
+      {/* HEADER */}
+      <section className="py-10 md:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeUp>
-            <p className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground">
               {project.subtitle}
             </p>
-            <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight md:text-5xl lg:text-6xl">
+
+            <h1 className="mt-2 font-serif text-4xl md:text-5xl">
               {project.title}
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+
+            <p className="mt-4 text-sm text-muted-foreground max-w-2xl">
               {project.description}
             </p>
+
             <div className="mt-6 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <Badge key={tag}>{tag}</Badge>
+                <Badge key={tag} variant="outline">
+                  {tag}
+                </Badge>
               ))}
             </div>
           </FadeUp>
         </div>
-        <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-8" id="hero-image">
-          <p className="mb-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-            Hero Image
-          </p>
+      </section>
+
+      {/* HERO IMAGE */}
+      <section className="py-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ImageZoom
             src={project.heroImage}
             alt={project.title}
             aspectRatio="16/9"
-            priority
-            sizes="100vw"
           />
         </div>
       </section>
 
+      {/* OBJECTIVES */}
       {project.objectives && (
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <FadeUp>
-              <h2 className="font-serif text-3xl md:text-4xl">Objectives</h2>
+              <h2 className="font-serif text-3xl md:text-4xl">
+                Objectives
+              </h2>
+
               <ul className="mt-10 grid gap-6 md:grid-cols-2">
                 {project.objectives.map((obj, i) => (
                   <li
                     key={obj}
-                    className="flex gap-4 border-l border-neutral-300 pl-6 dark:border-neutral-700"
+                    className="flex gap-4 border-l border-neutral-300 pl-6"
                   >
                     <span className="text-sm text-muted-foreground">
                       {String(i + 1).padStart(2, "0")}
@@ -105,33 +113,34 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
+      {/* PROCESS */}
       {project.process && (
-        <section className="border-y border-neutral-200 bg-white py-16 dark:border-neutral-800 dark:bg-black md:py-24">
+        <section className="py-16 md:py-24 border-y">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <FadeUp>
-              <h2 className="font-serif text-3xl md:text-4xl">Process</h2>
-              <ol className="mt-12 flex flex-wrap gap-4">
+              <h2 className="font-serif text-3xl md:text-4xl">
+                Process
+              </h2>
+
+              <ol className="mt-10 flex flex-wrap gap-3">
                 {project.process.map((step, i) => (
                   <li
                     key={step}
-                    className="flex items-center gap-3 border border-neutral-200 px-5 py-3 dark:border-neutral-800"
+                    className="border px-4 py-2 text-xs uppercase tracking-widest"
                   >
-                    <span className="text-[10px] text-muted-foreground">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-xs uppercase tracking-[0.15em]">
-                      {step}
-                    </span>
+                    {String(i + 1).padStart(2, "0")} {step}
                   </li>
                 ))}
               </ol>
             </FadeUp>
+
             {project.software && (
-              <div className="mt-12">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Software Used
+              <div className="mt-10">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">
+                  Software
                 </p>
-                <div className="mt-4 flex flex-wrap gap-3">
+
+                <div className="mt-3 flex flex-wrap gap-2">
                   {project.software.map((sw) => (
                     <Badge key={sw} variant="outline">
                       {sw}
@@ -143,47 +152,50 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* GALLERY */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeUp>
-            <h2 className="font-serif text-3xl md:text-4xl">Gallery</h2>
+            <h2 className="font-serif text-3xl md:text-4xl">
+              Gallery
+            </h2>
           </FadeUp>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {project.gallery.map((image, i) => (
-              <FadeUp key={image.src} delay={i * 0.08}>
-                <figure>
-                  <ImageZoom
-                    src={image.src}
-                    alt={image.alt}
-                    aspectRatio="4/5"
-                  />
-                  {image.caption && (
-                    <figcaption className="mt-4 text-xs uppercase tracking-[0.15em] text-muted-foreground">
-                      {image.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              </FadeUp>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {project.gallery.map((image) => (
+              <figure key={image.src}>
+                <ImageZoom
+                  src={image.src}
+                  alt={image.alt}
+                  aspectRatio="4/5"
+                />
+                {image.caption && (
+                  <figcaption className="mt-3 text-xs text-muted-foreground">
+                    {image.caption}
+                  </figcaption>
+                )}
+              </figure>
             ))}
           </div>
         </div>
       </section>
 
+      {/* METRICS */}
       {project.metrics && (
-        <section className="border-y border-neutral-200 bg-white py-16 dark:border-neutral-800 dark:bg-black md:py-24">
+        <section className="py-16 md:py-24 border-y">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <FadeUp>
               <h2 className="font-serif text-3xl md:text-4xl">
-                Project Metrics
+                Metrics
               </h2>
-              <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">
-                {project.metrics.map((metric) => (
-                  <div key={metric.label}>
-                    <p className="font-serif text-4xl md:text-5xl">
-                      {metric.value}
-                    </p>
-                    <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                      {metric.label}
+
+              <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+                {project.metrics.map((m) => (
+                  <div key={m.label}>
+                    <p className="text-3xl font-serif">{m.value}</p>
+                    <p className="text-xs uppercase text-muted-foreground">
+                      {m.label}
                     </p>
                   </div>
                 ))}
@@ -193,46 +205,34 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
-      {(project.lessons || legacyReflection) && (
+      {/* LESSONS */}
+      {project.lessons && (
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-16 lg:grid-cols-2">
-              {project.lessons && (
-                <FadeUp>
-                  <h2 className="font-serif text-3xl">Lessons Learned</h2>
-                  <ul className="mt-8 space-y-6">
-                    {project.lessons.map((lesson) => (
-                      <li
-                        key={lesson}
-                        className="text-sm leading-relaxed text-muted-foreground"
-                      >
-                        {lesson}
-                      </li>
-                    ))}
-                  </ul>
-                </FadeUp>
-              )}
-              {legacyReflection && (
-                <FadeUp delay={0.1}>
-                  <h2 className="font-serif text-3xl">Reflection</h2>
-                  <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                    {legacyReflection}
-                  </p>
-                </FadeUp>
-              )}
-            </div>
+            <FadeUp>
+              <h2 className="font-serif text-3xl md:text-4xl">
+                Lessons Learned
+              </h2>
+
+              <ul className="mt-8 space-y-4">
+                {project.lessons.map((lesson) => (
+                  <li key={lesson} className="text-sm text-muted-foreground">
+                    {lesson}
+                  </li>
+                ))}
+              </ul>
+            </FadeUp>
           </div>
         </section>
       )}
 
-      <Separator className="mx-auto max-w-7xl bg-neutral-200 dark:bg-neutral-800" />
+      <Separator />
 
+      {/* CTA */}
       <section className="py-16 text-center">
-        <FadeUp>
-          <Button asChild variant="outline">
-            <Link href="/projects">View More Projects</Link>
-          </Button>
-        </FadeUp>
+        <Button asChild variant="outline">
+          <Link href="/projects">View More Projects</Link>
+        </Button>
       </section>
     </article>
   );

@@ -1,3 +1,5 @@
+import { Project } from "next/dist/build/swc/types";
+
 export const projects: Project[] = [
   {
     id: "1",
@@ -60,20 +62,6 @@ export const projects: Project[] = [
       "Outdoor garments require articulated pattern engineering at key stress points.",
       "Clear tech pack communication bridges design intent and factory execution.",
     ],
-    caseStudy: [
-      {
-        id: "overview",
-        content:
-          "This case study documents the end-to-end development of a men's outdoor jacket, from market research through digital simulation and industrial pattern engineering to production-ready documentation.",
-        images: [
-          {
-            src: "/images/projects/jacket/hero.svg",
-            alt: "Men's outdoor jacket hero",
-            caption: "Project hero — technical outdoor jacket",
-          },
-        ],
-      },
-      {
         id: "research",
         content:
           "Research focused on active outdoor use, layering systems, and competitor benchmarks for weather protection, mobility, and durability in similar market segments.",
@@ -139,8 +127,6 @@ export const projects: Project[] = [
           "This project strengthened my ability to move from concept to production-ready documentation, combining creative direction with the precision required for technical apparel roles.",
       },
     ],
-  },
-  {
     id: "2",
     slug: "spring-summer-evening-gown",
     title: "Spring Summer Evening Gown Collection",
@@ -263,9 +249,6 @@ export const projects: Project[] = [
         content:
           "The collection reinforced my interest in balancing creative narrative with the technical clarity required for real-world garment development.",
       },
-    ],
-  },
-  {
     id: "3",
     slug: "technical-apparel-studies",
     title: "Technical Apparel Development Studies",
@@ -298,18 +281,6 @@ export const projects: Project[] = [
         caption: "Material exploration",
       },
     ],
-    caseStudy: [
-      {
-        id: "overview",
-        content:
-          "A series of garment engineering experiments exploring construction, pattern logic, and material performance for technical apparel contexts.",
-        images: [
-          {
-            src: "/images/projects/studies/hero.svg",
-            alt: "Technical apparel studies overview",
-          },
-        ],
-      },
       {
         id: "research",
         content:
@@ -375,8 +346,6 @@ export const projects: Project[] = [
           "These studies form a laboratory for refining the engineering mindset essential to technical designer and product development roles.",
       },
     ],
-  },
-];
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
