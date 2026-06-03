@@ -99,9 +99,6 @@ export default function HomePage() {
               <Link href="/contact">Contact Me</Link>
             </Button>
           </motion.div>
-          <Button variant="ghost" asChild>
-  <Link href="/projects">Explore Case Studies →</Link>
-</Button>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

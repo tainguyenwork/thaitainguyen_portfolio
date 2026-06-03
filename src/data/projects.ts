@@ -4,8 +4,6 @@ export const projects: Project[] = [
     id: "1",
     slug: "mens-outdoor-jacket-clo3d-gerber",
     title: "Application of CLO3D and Gerber AccuMark in Men's Outdoor Jacket Development",
-
-
     subtitle: "Technical Apparel Development",
     description:
       "A technical apparel development project integrating digital garment simulation and industrial pattern engineering for a men's outdoor jacket.",
@@ -13,9 +11,6 @@ export const projects: Project[] = [
     tags: ["CLO3D", "Gerber AccuMark", "Outdoor", "Technical"],
     coverImage: "/images/projects/jacket/cover.svg",
     heroImage: "/images/projects/jacket/hero.svg",
-
-
-
     gallery: [
       {
         src: "/images/projects/jacket/gallery-1.svg",
@@ -41,8 +36,6 @@ export const projects: Project[] = [
 
     sections: [
       {
-
-
         id: "research",
         content:
           "Research focused on active outdoor use, layering systems, and competitor benchmarks for weather protection, mobility, and durability in similar market segments.",
@@ -125,11 +118,6 @@ export const projects: Project[] = [
     tags: ["Womenswear", "Collection", "Evening Wear"],
     coverImage: "/images/projects/gown/cover.svg",
     heroImage: "/images/projects/gown/hero.png",
-
-
-
-
-
     gallery: [
       {
         src: "/images/projects/gown/gallery-1.svg",
