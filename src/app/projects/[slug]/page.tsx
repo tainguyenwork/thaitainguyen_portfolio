@@ -87,7 +87,7 @@ export default function ProjectDetailPage({ params }: Props) {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
+              {project.tags.map((tag: string) => (
                 <Badge key={tag} variant="outline">
                   {tag}
                 </Badge>
