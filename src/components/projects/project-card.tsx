@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ImageZoom } from "@/components/motion/image-zoom";
 import { Badge } from "@/components/ui/badge";
-import type { Project } from "@/data/projects";
+import type { Project } from "@/types/project";
 
 type ProjectCardProps = {
   project: Project;
