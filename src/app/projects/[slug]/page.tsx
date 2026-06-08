@@ -118,7 +118,7 @@ export default function ProjectDetailPage({ params }: Props) {
               </h2>
 
               <ul className="mt-10 grid gap-6 md:grid-cols-2">
-                {project.objectives.map((obj, i) => (
+                {project.objectives.map((obj: string, i: number) => (
                   <li
                     key={obj}
                     className="flex gap-4 border-l pl-6"
@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: Props) {
               </h2>
 
               <ol className="mt-10 flex flex-wrap gap-3">
-                {project.process.map((step, i) => (
+                {project.process.map((step: string, i: number) => (
                   <li
                     key={step}
                     className="border px-4 py-2 text-xs uppercase tracking-widest"
@@ -164,7 +164,7 @@ export default function ProjectDetailPage({ params }: Props) {
                 </p>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {project.software.map((sw) => (
+                  {project.software.map((sw: string) => (
                     <Badge key={sw} variant="outline">
                       {sw}
                     </Badge>
