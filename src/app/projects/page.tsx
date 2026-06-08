@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             <SectionHeading
               label="Portfolio"
               title="Projects"
-              description="Detailed case studies in technical apparel, conceptual womenswear, and garment engineering — prepared for industry applications and academic portfolio review."
+              description="Technical apparel development, conceptual womenswear, and garment engineering — prepared for industry applications and academic portfolio review."
             />
           </FadeUp>
           <FadeUp delay={0.15} className="mt-12">
