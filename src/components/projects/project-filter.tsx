@@ -1,11 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { projectFilters, type ProjectCategory } from "@/data/projects";
+import { projectFilters, type ProjectFilterCategory } from "@/data/projects";
 
 type ProjectFilterProps = {
-  active: ProjectCategory;
-  onChange: (category: ProjectCategory) => void;
+  active: ProjectFilterCategory;
+  onChange: (category: ProjectFilterCategory) => void;
 };
 
 export function ProjectFilter({ active, onChange }: ProjectFilterProps)

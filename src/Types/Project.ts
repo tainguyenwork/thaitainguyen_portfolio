@@ -1,4 +1,7 @@
-export type ProjectCategory = "all" | "technical" | "womenswear" | "experimental";
+export type ProjectCategory =
+  | "technical"
+  | "womenswear"
+  | "experimental";
 
 export type GalleryImage = {
   src: string;
@@ -25,5 +28,10 @@ export type Project = {
   objectives?: string[];
   process?: string[];
   software?: string[];
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
+  lessons?: string[];
   sections?: ProjectSection[];
 };

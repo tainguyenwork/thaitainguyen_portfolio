@@ -5,10 +5,10 @@ import { FadeUp } from "@/components/motion/fade-up";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { ProjectCard } from "@/components/projects/project-card";
 import { ProjectFilter } from "@/components/projects/project-filter";
-import { projects, type ProjectCategory } from "@/data/projects";
+import { projects, type ProjectFilterCategory } from "@/data/projects";
 
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState<ProjectCategory>("all");
+  const [filter, setFilter] = useState<ProjectFilterCategory>("all");
 
   const filtered = useMemo(() => {
     if (filter === "all") return projects;
