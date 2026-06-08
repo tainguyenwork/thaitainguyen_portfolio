@@ -186,7 +186,7 @@ export default function ProjectDetailPage({ params }: Props) {
           </FadeUp>
 
           <div className="mt-10 grid gap-8 md:grid-cols-2">
-            {project.gallery.map((img) => (
+            {project.gallery.map((img: { src: string; alt: string; caption?: string }) => (
               <figure key={img.src}>
                 <ImageZoom
                   src={img.src}
