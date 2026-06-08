@@ -82,7 +82,7 @@ export default function HomePage() {
                 <p>• CLO3D + Gerber workflow</p>
                 <p>• Outdoor & Technical Apparel</p>
                 <p>• 3+ Real Development Projects</p>
-        </motion.div>
+         </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,10 +93,10 @@ export default function HomePage() {
               <Link href="/projects">View Projects</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/resume">Download Resume</Link>
+              <Link href="/resume">Resume</Link>
             </Button>
             <Button asChild variant="ghost" size="lg">
-              <Link href="/contact">Contact Me</Link>
+              <Link href="/contact">Contact</Link>
             </Button>
           </motion.div>
           <motion.div
@@ -117,7 +117,7 @@ export default function HomePage() {
             <SectionHeading
               label="Selected Work"
               title="Production-Ready Design"
-              description="Case studies spanning technical outdoor development, conceptual womenswear, and garment engineering studies."
+              description="Selected projects spanning technical outdoor development, conceptual womenswear, and garment engineering."
             />
           </FadeUp>
           <div className="mb-10 text-sm text-muted-foreground">
