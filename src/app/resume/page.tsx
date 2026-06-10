@@ -33,7 +33,7 @@ export default function ResumePage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Button asChild size="lg">
-                <a href="/resume/thai-tai-nguyen-resume.pdf" download>
+                <a href="/resume/ThaiTaiNguyen_CV_FashionDesign.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF
                 </a>
