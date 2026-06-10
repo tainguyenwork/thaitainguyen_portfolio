@@ -31,9 +31,13 @@ export default function ResumePage() {
                 description="A concise overview of education, experience, and technical competencies."
               />
             </FadeUp>
+
             <FadeUp delay={0.1}>
               <Button asChild size="lg">
-                <a href="/resume/ThaiTaiNguyen_CV_FashionDesign.pdf" download>
+                <a
+                  href="/resume/ThaiTaiNguyen_CV_FashionDesign.pdf"
+                  download
+                >
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF
                 </a>
@@ -42,8 +46,10 @@ export default function ResumePage() {
           </div>
         </div>
       </section>
-
-      <section className="py-16 md:py-24">
+    </div>
+  );
+}
+      {/* <section className="py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <FadeUp>
             <div className="border border-neutral-200 bg-white p-10 md:p-16 dark:border-neutral-800 dark:bg-black">
@@ -165,7 +171,7 @@ export default function ResumePage() {
       </section>
     </div>
   );
-}
+} */}
 
 function ResumeSection({
   title,
