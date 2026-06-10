@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Code2, ExternalLink, Mail, MapPin, Share2 } from "lucide-react";
 import { FadeUp } from "@/components/motion/fade-up";
 import { SectionHeading } from "@/components/layout/section-heading";
-import { ContactForm } from "@/components/contact/contact-form";
+// import { ContactForm } from "@/components/contact/contact-form";
 import { createMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact",
@@ -94,9 +95,25 @@ export default function ContactPage() {
             </div>
           </FadeUp>
 
-          <FadeUp delay={0.15}>
+          {/* <FadeUp delay={0.15}>
             <ContactForm />
-          </FadeUp>
+          </FadeUp> */}
+          <FadeUp delay={0.15}>
+  <div className="border border-neutral-200 p-10 dark:border-neutral-800">
+    <h3 className="font-serif text-2xl">Let's Connect</h3>
+
+    <p className="mt-4 text-sm text-muted-foreground">
+      For internships, collaborations, freelance projects, or career opportunities,
+      feel free to contact me directly via email.
+    </p>
+
+    <Button asChild size="lg" className="mt-6">
+      <a href="mailto:nguyenthaitai.work@gmail.com?subject=Portfolio Inquiry">
+        Send Email
+      </a>
+    </Button>
+  </div>
+</FadeUp>
         </div>
       </section>
     </div>
