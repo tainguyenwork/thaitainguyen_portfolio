@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     id: "lotus-textile",
     company: "Lotus Textile & Garment Co., Ltd",
     position: "Technical Development Intern",
-    period: "2024 — Present",
+    period: "06/2025 — 08/2025",
     location: "Vietnam",
     responsibilities: [
       "Garment development support across sample and production stages",
@@ -24,14 +24,15 @@ export const experiences: Experience[] = [
   },
   {
     id: "gerber-leader",
-    company: "Gerber Software Team Leader",
-    position: "Peer Learning Lead",
+    company: "Academic Project",
+    position: "Fashion Designer & Pattern Maker",
     period: "2023 — 2024",
     responsibilities: [
-      "Led peer learning sessions for Gerber AccuMark fundamentals",
-      "Guided students through pattern digitization and grading workflows",
-      "Developed software learning materials and practice briefs",
-      "Organized hands-on activities for industrial pattern engineering",
+      "Conducted trend research and developed the collection concept.",
+      "Created mood boards, color palettes, and material selections.",
+      "Developed digital patterns using Gerber AccuMark.",
+      "Produced 3D garment simulations and fit evaluations in CLO3D.",
+      "Prepared technical documentation and specification sheets."  
     ],
   },
 ];
