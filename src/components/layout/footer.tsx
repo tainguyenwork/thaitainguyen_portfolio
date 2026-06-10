@@ -37,17 +37,26 @@ export function Footer() {
               </Link>
             ))}
           </nav>
-
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>{siteConfig.location}</p>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="block transition-opacity hover:opacity-50"
-            >
-              {siteConfig.email}
-            </a>
-          </div>
-        </div>
+              <p>{siteConfig.location}</p>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="transition-opacity hover:opacity-50"
+                >
+                  {siteConfig.email}
+                </a>
+
+                <a
+                  href="tel:+84584281005"
+                  className="transition-opacity hover:opacity-50"
+                >
+                  +84 584 281 005
+                </a>
+              </div>
+            </div>
+                    </div>
 
         <Separator className="my-10 bg-neutral-200 dark:bg-neutral-800" />
 
