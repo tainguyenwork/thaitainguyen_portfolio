@@ -1603,3 +1603,140 @@ textarea.form-input {
 .back-link:hover svg {
   transform: translateX(-4px);
 }
+
+/* Contact Editorial Layout Styles */
+.contact-editorial-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-editorial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-editorial-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.contact-editorial-description {
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--text-body);
+  max-width: 55ch;
+  margin-bottom: 4rem;
+  font-weight: 300;
+}
+
+.contact-editorial-actions {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btn-email-cta {
+  transition: var(--transition-smooth);
+}
+
+.btn-email-cta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.2);
+}
+
+.btn-email-cta:hover svg.btn-arrow-icon {
+  transform: translateX(6px);
+}
+
+.btn-cv-cta {
+  transition: var(--transition-smooth);
+}
+
+.btn-cv-cta:hover {
+  transform: scale(1.03);
+}
+
+/* Secondary Links styling */
+.contact-editorial-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding-top: 3.5rem;
+}
+
+.secondary-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.secondary-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.secondary-text-link {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.secondary-text-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: var(--transition-fast);
+}
+
+.secondary-text-link:hover {
+  color: var(--text-primary);
+}
+
+.secondary-text-link:hover::after {
+  width: 100%;
+}
+
+.secondary-separator {
+  color: var(--border-color);
+  font-size: 0.95rem;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 640px) {
+  .contact-editorial-actions {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .contact-editorial-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .secondary-links {
+    gap: 1rem;
+  }
+}
+
