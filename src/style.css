@@ -68,6 +68,8 @@ body {
 
 h1, h2, h3, h4, h5, h6, .logo {
   color: var(--text-primary);
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 
 p {
@@ -1068,8 +1070,9 @@ input, textarea, button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-muted);
   transition: var(--transition-smooth);
   flex-shrink: 0;
@@ -1127,11 +1130,12 @@ input, textarea, button {
 }
 
 .stat-number {
-  font-family: var(--font-serif);
-  font-size: 4.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(3rem, 7vw, 4.5rem);
   font-weight: 300;
   color: var(--accent);
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .stat-label {
