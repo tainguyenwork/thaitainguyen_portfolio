@@ -287,38 +287,20 @@ function initCounters() {
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
-  const statusDiv = document.querySelector('.form-status');
   
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerText;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
     
-    // UI Visual feedback
-    submitBtn.disabled = true;
-    submitBtn.innerText = 'Sending...';
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     
-    // Simulate API request (e.g. Formspree / Vercel Serverless / static trigger)
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerText = originalText;
-      
-      // Success feedback animation
-      if (statusDiv) {
-        statusDiv.innerText = 'Thank you! Your message has been sent successfully.';
-        statusDiv.className = 'form-status success';
-        
-        // Reset form inputs
-        form.reset();
-        
-        // Remove success message after a few seconds
-        setTimeout(() => {
-          statusDiv.style.display = 'none';
-        }, 5000);
-      }
-    }, 1500);
+    // Open standard email client
+    window.location.href = `mailto:nguyenthaitai.work@gmail.com?subject=${subject}&body=${body}`;
   });
 }
