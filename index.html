@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Portfolio — Creative Designer & Developer</title>
+    <meta name="description" content="Editorial-style portfolio of a creative designer & developer specializing in fashion design, digital garment simulation, motion graphics, and front-end development." />
+    <meta name="keywords" content="Portfolio, Fashion Design, Digital Fashion, CLO3D, Motion Design, Graphic Design, Web Development, Creative Developer" />
+    
+    <!-- OpenGraph SEO Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio — Creative Designer & Developer" />
+    <meta property="og:description" content="Editorial-style portfolio showcasing digital-first craftsmanship in design and development." />
+    <meta property="og:url" content="https://your-portfolio.vercel.app/" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Premium Preloader -->
+    <div class="loader-screen">
+      <div class="loader-content">
+        <div class="loader-logo">MH</div>
+        <div class="loader-line-container">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noise Texture Overlay & Floating Background Gradients -->
+    <div class="noise-overlay"></div>
+    <div class="gradient-bg">
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky-nav">
+      <div class="container nav-container">
+        <a href="#" class="logo">MH.</a>
+        
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <!-- Light/Dark Mode Switcher -->
+          <button class="theme-btn" aria-label="Toggle Theme">
+            <!-- Moon Icon (Dark Mode active) -->
+            <svg class="moon-icon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- Sun Icon (Light Mode active) -->
+            <svg class="sun-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          
+          <!-- Hamburger menu for mobile -->
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <p class="hero-subtitle">Digital Fashion & Creative Developer</p>
+            <h1 class="hero-title">
+              Designing<br />
+              Ideas into<br />
+              <span>Experiences.</span>
+            </h1>
+            <p class="hero-description">
+              A premium space showcasing technical craftsmanship, editorial aesthetic, and interaction design. Specialized in digital garments simulation (CLO3D), high-fidelity modeling, and front-end creative development.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                View Projects
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual reveal" style="transition-delay: 0.3s;">
+            <!-- Abstract background shape overlay -->
+            <div class="circle-canvas">
+              <div class="circle-inner"></div>
+              <div class="visual-lines">
+                <span class="visual-line"></span>
+                <span class="visual-line"></span>
+                <span class="visual-line"></span>
+                <span class="visual-line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-padding">
+        <div class="container">
+          <div class="about-grid">
+            <!-- Left Column: Portrait image -->
+            <div class="about-image-col reveal">
+              <div class="about-image-container">
+                <img src="/src/assets/profile.jpg" alt="Marianna Hurtado Portrait" class="about-profile-img" />
+              </div>
+            </div>
+            
+            <!-- Right Column: Biography & Expertise Tags -->
+            <div class="about-content-col reveal" style="transition-delay: 0.15s;">
+              <h2 class="about-title-large">About Marianna</h2>
+              
+              <p class="about-paragraph">
+                Digital Fashion Designer and Technical Apparel Developer with expertise in CLO3D virtual garment simulation, tech packs, and pattern making. Experienced in lingerie, tailoring, and ready-to-wear with international background in Miami and Madrid.
+              </p>
+              
+              <p class="about-paragraph">
+                My passion lies in bridging the gap between creative vision and technical execution through digital innovation. By leveraging cutting-edge technology like CLO3D, I help brands reduce physical sampling, accelerate product development, and create more sustainable fashion workflows.
+              </p>
+              
+              <p class="about-paragraph">
+                With experience across diverse markets and garment categories, I bring a global perspective to every project, ensuring designs are both commercially viable and creatively compelling.
+              </p>
+              
+              <h3 class="expertise-heading">Core Expertise</h3>
+              
+              <div class="expertise-tags">
+                <span class="expertise-tag tag-clo3d">CLO3D Virtual Garment Simulation</span>
+                <span class="expertise-tag tag-illustrator">Adobe Illustrator</span>
+                <span class="expertise-tag tag-techpack">Technical Pack Development</span>
+                <span class="expertise-tag tag-pattern">Pattern Making & Grading</span>
+                <span class="expertise-tag tag-research">Trend Research & Analysis</span>
+                <span class="expertise-tag tag-vendor">Vendor Communication</span>
+                <span class="expertise-tag tag-fit">Fit Development</span>
+                <span class="expertise-tag tag-fashion">Digital Fashion Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+          <p class="section-meta">02 / Technical Skills</p>
+          <h2 class="section-title">The Toolkit</h2>
+          
+          <div class="skills-container">
+            <div class="skills-left reveal">
+              <p>
+                Combining deep technical knowledge in digital apparel development with modern web languages and design tools to build comprehensive solutions.
+              </p>
+            </div>
+            
+            <div class="skills-grid reveal-stagger">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CLO 3D & Digital Sampling</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-percent="95"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Adobe Illustrator & Photoshop</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-percent="90"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">After Effects & Premiere Pro</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-percent="80"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5, CSS3, & Vanilla JS</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-percent="85"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Figma & Interface Prototyping</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-percent="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Portfolio Grid -->
+      <section id="projects" class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+          <div class="portfolio-intro reveal">
+            <div>
+              <p class="section-meta">03 / Selection of Work</p>
+              <h2 class="section-title" style="margin-bottom: 0;">Featured Projects</h2>
+            </div>
+            <p>Exploring the boundaries of digital fashion, material physics, and interaction design through dynamic portfolio pieces.</p>
+          </div>
+          
+          <div class="portfolio-grid">
+            <!-- Project 1 (Wide card) -->
+            <a href="/projects/project-1.html" class="project-card wide reveal">
+              <div class="project-image-container">
+                <img src="/src/assets/project-1.jpg" alt="High-Performance Winterwear Concept" class="project-img" loading="lazy" />
+                <div class="project-overlay">
+                  <div class="overlay-details">
+                    <h3 class="overlay-title">High-Performance Winterwear</h3>
+                    <div class="overlay-meta">
+                      <span>Concept Design</span>
+                      <span>2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <div>
+                  <div class="project-meta">
+                    <span>Snowpeak Challenge</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <h3 class="project-title">High-Performance Winterwear</h3>
+                </div>
+                <div class="project-arrow">
+                  <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Project 2 (Narrow card) -->
+            <a href="/projects/project-2.html" class="project-card narrow reveal" style="transition-delay: 0.2s;">
+              <div class="project-image-container">
+                <img src="/src/assets/project-2.jpg" alt="Futuristic Streetwear Tracksuit" class="project-img" loading="lazy" />
+                <div class="project-overlay">
+                  <div class="overlay-details">
+                    <h3 class="overlay-title">Futuristic Tracksuit</h3>
+                    <div class="overlay-meta">
+                      <span>Techwear</span>
+                      <span>2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <div>
+                  <div class="project-meta">
+                    <span>Digital Apparel</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <h3 class="project-title">Futuristic Tracksuit</h3>
+                </div>
+                <div class="project-arrow">
+                  <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Project 3 (Medium Left card) -->
+            <a href="/projects/project-3.html" class="project-card medium-left reveal">
+              <div class="project-image-container">
+                <img src="/src/assets/project-3.jpg" alt="Retro Colorblock Outfit" class="project-img" loading="lazy" />
+                <div class="project-overlay">
+                  <div class="overlay-details">
+                    <h3 class="overlay-title">Retro Colorblock</h3>
+                    <div class="overlay-meta">
+                      <span>Apparel Prototyping</span>
+                      <span>2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <div>
+                  <div class="project-meta">
+                    <span>Digital Draping</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <h3 class="project-title">Retro Colorblock Outfit</h3>
+                </div>
+                <div class="project-arrow">
+                  <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section id="process" class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+          <p class="section-meta">04 / The Workflow</p>
+          <h2 class="section-title">The Process</h2>
+          
+          <div class="process-layout">
+            <div class="reveal">
+              <p style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; line-height: 1.4; color: var(--text-primary); margin-bottom: 2rem;">
+                From the first sketch to digital simulation and code handoff, structural fidelity is maintained.
+              </p>
+              <p style="font-family: var(--font-sans); font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: var(--text-secondary);">
+                By deploying clean templates, 3D simulations, and comprehensive tech specs, I create smooth transitions between early creative concepting and vendor production.
+              </p>
+            </div>
+            
+            <div class="process-steps reveal-stagger">
+              <div class="process-step">
+                <div class="step-num-container">01</div>
+                <div class="step-content">
+                  <h3>Research & Concept</h3>
+                  <p>Investigating market trends, historical apparel constructs, functional user needs, and mood boards to set a clear direction.</p>
+                </div>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-num-container">02</div>
+                <div class="step-content">
+                  <h3>Pattern Making & Drape</h3>
+                  <p>Creating exact 2D patterns digitally, focusing on clean panel segments, fit parameters, and initial fabric simulations.</p>
+                </div>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-num-container">03</div>
+                <div class="step-content">
+                  <h3>3D Virtual Fitting</h3>
+                  <p>Simulating stress-tests, drape dynamics, and material physics in CLO3D. High-fidelity rendering to confirm silhouette structure.</p>
+                </div>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-num-container">04</div>
+                <div class="step-content">
+                  <h3>Tech Packs & Specifications</h3>
+                  <p>Compiling exact measurement specs, bill of materials (BOM), stitching directives, and grading specs for delivery.</p>
+                </div>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-num-container">05</div>
+                <div class="step-content">
+                  <h3>Creative Development</h3>
+                  <p>Packaging standard 3D visual assets, web portfolios, and interface files, preparing everything for production handoff.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats reveal">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="7" data-suffix="+">0</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="45" data-suffix="">0</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="30" data-suffix="+">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="4" data-suffix="">0</span>
+            <span class="stat-label">Design Awards</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section-padding">
+        <div class="container">
+          <p class="section-meta">05 / Connection</p>
+          <h2 class="section-title">Let's Collaborate</h2>
+          
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <p>Ready to build something meaningful together? Let's get in touch to discuss details, job collaborations, or design inquiries.</p>
+              
+              <div class="contact-details">
+                <div class="contact-method">
+                  <span class="contact-method-label">Direct Email</span>
+                  <a href="mailto:hello@example.com" class="contact-method-value">hello@example.com</a>
+                </div>
+                <div class="contact-method">
+                  <span class="contact-method-label">Direct Call</span>
+                  <a href="tel:+34600000000" class="contact-method-value">+34 600 000 000</a>
+                </div>
+              </div>
+              
+              <div class="social-links">
+                <a href="https://linkedin.com/" target="_blank" class="social-link" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/" target="_blank" class="social-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Download Resume" title="Download Resume">
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="reveal" style="transition-delay: 0.2s;">
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" class="form-input" placeholder=" " required />
+                  <label for="name" class="form-label">Your Name</label>
+                  <span class="form-group-line"></span>
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" id="email" name="email" class="form-input" placeholder=" " required />
+                  <label for="email" class="form-label">Your Email</label>
+                  <span class="form-group-line"></span>
+                </div>
+                
+                <div class="form-group">
+                  <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+                  <label for="message" class="form-label">Tell me about your project...</label>
+                  <span class="form-group-line"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                  Send Message
+                  <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                
+                <div class="form-status"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-callout">
+            Let's Build Something Meaningful Together.
+          </div>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#process" class="footer-link">Process</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-bottom">
+          <div>© 2026 MH. All rights reserved.</div>
+          <div style="display: flex; gap: 2rem;">
+            <a href="#" class="footer-link" style="text-transform: none;">Privacy Policy</a>
+            <a href="#" class="footer-link" style="text-transform: none;">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Entry Point JavaScript -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

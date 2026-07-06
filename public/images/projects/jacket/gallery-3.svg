@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
-  <rect width="1200" height="1500" fill="#F0F0F0"/>
-  <rect x="80" y="80" width="1040" height="1340" stroke="#D9D9D9" stroke-width="1"/>
-  <line x1="80" y1="750" x2="1120" y2="750" stroke="#D9D9D9" stroke-width="1"/>
-  <line x1="600" y1="80" x2="600" y2="1420" stroke="#D9D9D9" stroke-width="1"/>
-  <text x="600" y="720" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#111111">03</text>
-  <text x="600" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="6" fill="#666666">PATTERN DEVELOPMENT</text>
-  <text x="600" y="1380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#999999">REPLACE WITH YOUR IMAGE</text>
-</svg>
