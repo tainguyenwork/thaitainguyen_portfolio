@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Dark Theme variables (default) */
@@ -7,6 +7,7 @@
   --bg-surface: #181818;
   --text-primary: #f5f5f5;
   --text-secondary: #a0a0a0;
+  --text-body: rgba(255, 255, 255, 0.82);
   --text-muted: #555555;
   --accent: #c5a880; /* Warm Champagne Gold */
   --accent-rgb: 197, 168, 128;
@@ -30,6 +31,7 @@
   --bg-surface: #e5e5dd;
   --text-primary: #1a1a1a;
   --text-secondary: #555555;
+  --text-body: rgba(26, 26, 26, 0.85);
   --text-muted: #8c8c82;
   --accent: #927552; /* Refined Dark Bronze/Gold */
   --accent-rgb: 146, 117, 82;
@@ -57,11 +59,25 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  color: var(--text-primary);
+  color: var(--text-body);
   font-family: var(--font-sans);
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
   cursor: none; /* Hide standard cursor for custom cursor */
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+  color: var(--text-primary);
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--text-body);
+  max-width: 65ch;
 }
 
 a {
@@ -298,33 +314,30 @@ input, textarea, button {
 }
 
 .section-padding {
-  padding: 10rem 0;
+  padding: 14rem 0; /* Increased padding for premium editorial white space */
 }
 @media (max-width: 768px) {
-  .section-padding { padding: 6rem 0; }
+  .section-padding { padding: 8rem 0; }
 }
 
 /* Section Headers */
 .section-meta {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin-bottom: 3.5rem;
-}
-@media (max-width: 768px) {
-  .section-title { font-size: 2.5rem; }
+  letter-spacing: -0.03em;
+  margin-bottom: 4.5rem;
 }
 
 /* Header & Navigation */
@@ -366,10 +379,10 @@ input, textarea, button {
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: var(--text-secondary);
   transition: var(--transition-fast);
   position: relative;
@@ -490,13 +503,13 @@ input, textarea, button {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2.2rem;
-  border-radius: 4px;
+  padding: 1.1rem 2.6rem;
+  border-radius: 50px; /* Fully rounded corners for premium feel */
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
@@ -574,32 +587,26 @@ input, textarea, button {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   margin-bottom: 2.5rem;
 }
 
 .hero-title span {
   font-style: italic;
-  font-weight: 400;
-}
-
-@media (max-width: 1200px) {
-  .hero-title { font-size: 5rem; }
-}
-@media (max-width: 640px) {
-  .hero-title { font-size: 3.5rem; }
+  font-weight: 600;
 }
 
 .hero-description {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  max-width: 540px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--text-body);
+  max-width: 65ch;
   margin-bottom: 3.5rem;
 }
 
@@ -690,35 +697,34 @@ input, textarea, button {
 }
 
 .about-title-large {
-  font-family: var(--font-sans);
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 600;
   line-height: 1.1;
   color: var(--text-primary);
   margin-bottom: 2rem;
-  letter-spacing: -0.02em;
-}
-@media (max-width: 768px) {
-  .about-title-large { font-size: 2.8rem; }
+  letter-spacing: -0.03em;
 }
 
 .about-paragraph {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.65;
-  color: var(--text-secondary);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--text-body);
   margin-bottom: 1.5rem;
+  max-width: 65ch;
 }
 
 .expertise-heading {
-  font-family: var(--font-sans);
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 500;
   color: var(--text-primary);
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .expertise-tags {
@@ -1413,14 +1419,12 @@ textarea.form-input {
 
 .project-hero-title {
   font-family: var(--font-serif);
-  font-size: 5rem;
-  font-weight: 300;
-  line-height: 1.05;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   margin-bottom: 2.5rem;
   max-width: 900px;
-}
-@media (max-width: 768px) {
-  .project-hero-title { font-size: 3rem; }
 }
 
 .project-hero-meta {
@@ -1483,18 +1487,21 @@ textarea.form-input {
 
 .project-main-text h2 {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
   margin-bottom: 2rem;
 }
 
 .project-main-text p {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.8;
-  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  color: var(--text-body);
   margin-bottom: 2rem;
+  max-width: 65ch;
 }
 
 .project-sidebar-card {
