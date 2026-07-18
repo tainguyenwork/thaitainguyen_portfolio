@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
-  initCustomCursor();
   initThemeToggle();
   initScrollEffects();
   initMenuMobile();
@@ -43,68 +42,6 @@ function initPreloader() {
   }, 4000);
 }
 
-/* ==========================================================================
-   2. Custom Interactive Cursor
-   ========================================================================== */
-function initCustomCursor() {
-  const cursor = document.querySelector('.custom-cursor');
-  const follower = document.querySelector('.custom-cursor-follower');
-  
-  if (!cursor || !follower) return;
-
-  let mouseX = 0, mouseY = 0;
-  let followerX = 0, followerY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
-  });
-
-  // Smooth follower animation loop
-  function animateFollower() {
-    // Interpolate follower coordinates toward mouse position (higher = faster)
-    const ease = 0.28;
-    followerX += (mouseX - followerX) * ease;
-    followerY += (mouseY - followerY) * ease;
-    
-    follower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0) translate(-50%, -50%)`;
-    
-    requestAnimationFrame(animateFollower);
-  }
-  animateFollower();
-
-  // Hide cursor when leaving window
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '0';
-    follower.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '1';
-    follower.style.opacity = '1';
-  });
-
-  // Add hover state listeners on all interactive elements
-  function refreshHoverListeners() {
-    const hoverables = document.querySelectorAll('a, button, input, textarea, .theme-btn, .project-card, [role="button"]');
-    hoverables.forEach((el) => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hovered');
-        follower.classList.add('hovered');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hovered');
-        follower.classList.remove('hovered');
-      });
-    });
-  }
-  
-  refreshHoverListeners();
-  
-  // Expose this so dynamically loaded content can re-bind listeners
-  window.refreshHoverListeners = refreshHoverListeners;
-}
 
 /* ==========================================================================
    3. Theme Toggling (Dark/Light)
