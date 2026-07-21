@@ -41,13 +41,14 @@
         <a href="/" class="logo">TTN.</a>
         
         <ul class="nav-links">
-          <li><a href="/#hero" class="nav-link">Home</a></li>
-          <li><a href="/#about" class="nav-link">About</a></li>
-          <li><a href="/#projects" class="nav-link active">Projects</a></li>
-          <li><a href="/#contact" class="nav-link">Contact</a></li>
+          <li><a href="/#hero" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="/#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="/#projects" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="/#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
         
         <div class="nav-actions">
+          <button class="lang-toggle" aria-label="Toggle Language">EN</button>
           <button class="theme-btn" aria-label="Toggle Theme">
             <svg class="moon-icon" viewBox="0 0 24 24">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -75,87 +76,243 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main class="section-padding">
+    <main>
       <div class="container">
         <!-- Back navigation link -->
-        <a href="/" class="back-link">
+        <a href="/" class="back-link" style="margin-top: 2rem; display: inline-flex;" data-i18n="projectPage.back">
           <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           Back to Work
         </a>
 
-        <!-- Project Hero -->
-        <section class="project-hero">
-          <h1 class="project-hero-title reveal">Thiết kế áo jacket</h1>
-          
-          <div class="project-hero-meta reveal-stagger">
-            <div class="meta-block">
-              <h3 class="meta-block-label">Client / Context</h3>
-              <p class="meta-block-value">Digital Fashion Collection</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">Services Provided</h3>
-              <p class="meta-block-value">3D Draping, Texturing, Lighting Setup, Walk-cycle animation</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">My Role</h3>
-              <p class="meta-block-value">Lead 3D Fashion Designer</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">Timeline</h3>
-              <p class="meta-block-value">Spring 2025</p>
-            </div>
+        <!-- 1. Hero Section -->
+        <section class="case-study-hero reveal">
+          <h1 class="case-study-title">Thiết kế áo jacket</h1>
+          <p class="case-study-summary">
+            A high-performance technical outerwear design project focused on modular utility, complex hardware integration, and ergonomic fit for active urban environments.
+          </p>
+
+          <div class="case-study-hero-img">
+            <img src="../src/assets/project-2.jpg" alt="Technical Jacket 3D Render" />
           </div>
 
-          <div class="project-hero-img-container reveal">
-            <img src="/src/assets/project-2.jpg" alt="Futuristic Streetwear Tracksuit Detail" class="project-hero-img" />
+          <div class="metadata-grid">
+            <div class="metadata-card">
+              <span class="metadata-label">Role</span>
+              <span class="metadata-value">Technical Outerwear Designer</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Duration</span>
+              <span class="metadata-value">5 Weeks</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Category</span>
+              <span class="metadata-value">Techwear / Outerwear</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Software</span>
+              <span class="metadata-value">CLO3D, Adobe Illustrator</span>
+            </div>
           </div>
         </section>
 
-        <!-- Project Content Grid -->
-        <section class="section-padding project-content-grid">
-          <div class="project-main-text reveal">
-            <h2>The Challenge & Approach</h2>
-            <p>
-              This project focused on designing a modular, futuristic streetwear tracksuit with custom utility attachments. The silhouette needed to appear heavy and structured while retaining natural, soft movement under active poses.
-            </p>
+        <!-- 2. Project Overview -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Project Overview</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); max-width: 80ch;">
+            The goal of this project was to engineer a futuristic, modular streetwear jacket that offers high mobility while integrating custom utility attachments. The structural challenge lay in balancing a heavy, protective silhouette with lightweight material properties and ensuring that real-world seam lines would perform flawlessly under active tension.
+          </p>
+        </section>
+
+        <!-- 3. Objectives -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Core Objectives</h2>
+          <div class="objectives-grid">
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="objective-title">Ergonomic Drafting</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
+              </div>
+              <h3 class="objective-title">Hardware Integration</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <h3 class="objective-title">BOM & Trim Dev</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="objective-title">Production Scaling</h3>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Design & Development Process -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Workflow & Process</h2>
+          <div class="workflow-timeline">
             
-            <h2>Creative Concept & Styling</h2>
-            <p>
-              I chose a dark carbon-fiber texture scheme layered with custom straps and elastic buckles. The design references cyber-industrial silhouettes combined with classic sport geometries to establish a progressive design statement.
-            </p>
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">1. Reference & Hardware Sourcing</h3>
+                <p class="workflow-desc">Studying military gear, technical fabrics, and mapping attachment points for buckles and zippers.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">2. Pattern Block Construction</h3>
+                <p class="workflow-desc">Developing complex raglan sleeves and ergonomic knee articulations to support range of motion.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">3. 3D Assembly & Stress Testing</h3>
+                <p class="workflow-desc">Simulating the garment in CLO3D to verify tension maps and eliminate physical friction zones.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">4. Documentation & Trim Specs</h3>
+                <p class="workflow-desc">Finalizing the Bill of Materials (BOM), stitching details, and hardware placement for factory hand-off.</p>
+              </div>
+            </div>
             
-            <h2>Pattern Design & Construction</h2>
-            <p>
-              Patterns were drafted to support complex raglan sleeves and ergonomic knee articulations. These details ensure that real-world sewing lines align perfectly, providing accurate simulation references in CLO3D.
-            </p>
-
-            <h2>Outcome & Impact</h2>
-            <p>
-              The virtual prototype was used directly in lookbook renders and motion graphic promotions, resulting in a zero-physical sampling loop and 80% faster design sign-off.
-            </p>
-          </div>
-
-          <div class="project-sidebar-card reveal" style="transition-delay: 0.2s;">
-            <h3>Key Deliverables</h3>
-            <ul>
-              <li>High-res CLO3D simulations</li>
-              <li>Anatomical avatars and poses</li>
-              <li>Custom trim & hardware designs</li>
-              <li>Production-ready tech packs</li>
-              <li>Marketing lookbook renderings</li>
-            </ul>
           </div>
         </section>
 
-        <!-- Gallery Grid -->
-        <section class="project-gallery-grid reveal-stagger">
-          <div class="gallery-img-container">
-            <img src="/src/assets/project-2.jpg" alt="Streetwear detail view 1" class="gallery-img" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/src/assets/project-2.jpg" alt="Streetwear detail view 2" class="gallery-img" style="filter: brightness(0.85);" />
+        <!-- 5. Gallery -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Design Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../src/assets/project-2.jpg" alt="Technical Jacket Flat Pattern" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-2.jpg" alt="Jacket Front Angle" style="filter: brightness(0.9);" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-2.jpg" alt="Hardware Detail" style="filter: brightness(0.8);" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-2.jpg" alt="Stress Map Simulation" style="filter: saturate(1.2);" />
+            </div>
           </div>
         </section>
+
+        <!-- 6. Technical Details -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Technical Details</h2>
+          <div class="tech-details-grid">
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Main Fabric</span>
+              <span class="tech-detail-value">3-Layer Gore-Tex Pro</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Hardware</span>
+              <span class="tech-detail-value">Fidlock Magnetic Buckles</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Seam Finish</span>
+              <span class="tech-detail-value">Fully Taped (Waterproof)</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Closure</span>
+              <span class="tech-detail-value">YKK AquaGuard Zippers</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Pattern Features</span>
+              <span class="tech-detail-value">Articulated Sleeves</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Challenges & Solutions -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Challenges & Solutions</h2>
+          <div class="challenge-solution-grid">
+            <div class="cs-card challenge">
+              <div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg></div>
+              <h3 class="cs-title">Challenge: Sleeve Articulation Binding</h3>
+              <p class="workflow-desc">Initial 3D simulations revealed excessive strain maps around the elbow joint when the avatar was posed in an active stance, indicating the stiff 3-layer fabric would restrict wearer mobility.</p>
+            </div>
+            <div class="cs-card solution">
+              <div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <h3 class="cs-title">Solution: Dart Re-engineering</h3>
+              <p class="workflow-desc">Redrafted the two-piece sleeve by introducing structural darts at the inner elbow and adding a 5% ease allowance to the outer curve. Re-simulation confirmed a 40% reduction in fabric tension during movement.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Final Outcome -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Final Outcome</h2>
+          <ul class="outcome-checklist">
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Factory-ready BOM & Trim List
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Ergonomic Pattern Layout
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Zero-Waste Virtual Sampling
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Verified Water-tight Construction
+            </li>
+          </ul>
+        </section>
+
+        <!-- 9. Lessons Learned -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Lessons Learned</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+            Developing technical outerwear requires a deep synergy between pattern drafting and trim specification. This project demonstrated that accurately modeling hardware weights and seam-tape rigidity in 3D is critical; failing to account for these elements digitally can result in unexpected stiffness in the physical garment.
+          </p>
+        </section>
+
+        <!-- 10. Related Projects -->
+        <section class="related-projects reveal">
+          <h2 class="case-study-section-title" style="text-align: center;" data-i18n="projectPage.related">Explore More Work</h2>
+          <div class="related-grid">
+            <a href="project-3.html" class="related-card">
+              <img src="../src/assets/project-3.jpg" alt="Áo thun mùa hè" />
+              <div class="related-overlay">
+                <span class="related-label" data-i18n="projectPage.next">Next Project</span>
+                <span class="related-title">Áo thun mùa hè</span>
+              </div>
+            </a>
+            <a href="project-1.html" class="related-card">
+              <img src="../src/assets/project-1.jpg" alt="Thiết kế đầm dạ hội" />
+              <div class="related-overlay">
+                <span class="related-label" data-i18n="projectPage.prev">Previous Project</span>
+                <span class="related-title">Thiết kế đầm dạ hội</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -163,22 +320,22 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <div class="footer-callout">
+          <div class="footer-callout" data-i18n="contact.title">
             Let's Build Something Meaningful Together.
           </div>
           <ul class="footer-links">
-            <li><a href="/" class="footer-link">Home</a></li>
-            <li><a href="/#about" class="footer-link">About</a></li>
-            <li><a href="/#projects" class="footer-link">Projects</a></li>
-            <li><a href="/#contact" class="footer-link">Contact</a></li>
+            <li><a href="/" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="/#about" class="footer-link" data-i18n="nav.about">About</a></li>
+            <li><a href="/#projects" class="footer-link" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-bottom">
-          <div>© 2026 TTN. All rights reserved.</div>
+          <div data-i18n="footer.rights">© 2026 TTN. All rights reserved.</div>
           <div style="display: flex; gap: 2rem;">
-            <a href="#" class="footer-link" style="text-transform: none;">Privacy Policy</a>
-            <a href="#" class="footer-link" style="text-transform: none;">Terms of Service</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.terms">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -186,5 +343,6 @@
 
     <!-- Entry Point JavaScript -->
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/i18n.js"></script>
   </body>
 </html>

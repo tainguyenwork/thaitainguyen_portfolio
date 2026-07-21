@@ -41,13 +41,14 @@
         <a href="/" class="logo">TTN.</a>
         
         <ul class="nav-links">
-          <li><a href="/#hero" class="nav-link">Home</a></li>
-          <li><a href="/#about" class="nav-link">About</a></li>
-          <li><a href="/#projects" class="nav-link active">Projects</a></li>
-          <li><a href="/#contact" class="nav-link">Contact</a></li>
+          <li><a href="/#hero" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="/#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="/#projects" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="/#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
         
         <div class="nav-actions">
+          <button class="lang-toggle" aria-label="Toggle Language">EN</button>
           <button class="theme-btn" aria-label="Toggle Theme">
             <svg class="moon-icon" viewBox="0 0 24 24">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -75,87 +76,243 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main class="section-padding">
+    <main>
       <div class="container">
         <!-- Back navigation link -->
-        <a href="/" class="back-link">
+        <a href="/" class="back-link" style="margin-top: 2rem; display: inline-flex;" data-i18n="projectPage.back">
           <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           Back to Work
         </a>
 
-        <!-- Project Hero -->
-        <section class="project-hero">
-          <h1 class="project-hero-title reveal">Áo thun mùa hè</h1>
-          
-          <div class="project-hero-meta reveal-stagger">
-            <div class="meta-block">
-              <h3 class="meta-block-label">Client / Context</h3>
-              <p class="meta-block-value">Draping & Shape Studies</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">Services Provided</h3>
-              <p class="meta-block-value">Pattern Draping, Color Grading, 3D Fit Validation</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">My Role</h3>
-              <p class="meta-block-value">Pattern Making Specialist</p>
-            </div>
-            <div class="meta-block">
-              <h3 class="meta-block-label">Timeline</h3>
-              <p class="meta-block-value">Spring 2025</p>
-            </div>
+        <!-- 1. Hero Section -->
+        <section class="case-study-hero reveal">
+          <h1 class="case-study-title">Áo thun mùa hè</h1>
+          <p class="case-study-summary">
+            A comprehensive study on structural color-blocking and activewear paneling, engineered for maximum breathability and athletic performance in warm climates.
+          </p>
+
+          <div class="case-study-hero-img">
+            <img src="../src/assets/project-3.jpg" alt="Summer T-Shirt 3D Render" />
           </div>
 
-          <div class="project-hero-img-container reveal">
-            <img src="/src/assets/project-3.jpg" alt="Retro Colorblock Outfit Detail" class="project-hero-img" />
+          <div class="metadata-grid">
+            <div class="metadata-card">
+              <span class="metadata-label">Role</span>
+              <span class="metadata-value">Pattern Making Specialist</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Duration</span>
+              <span class="metadata-value">3 Weeks</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Category</span>
+              <span class="metadata-value">Activewear / Casual</span>
+            </div>
+            <div class="metadata-card">
+              <span class="metadata-label">Software</span>
+              <span class="metadata-value">CLO3D, Gerber Accumark</span>
+            </div>
           </div>
         </section>
 
-        <!-- Project Content Grid -->
-        <section class="section-padding project-content-grid">
-          <div class="project-main-text reveal">
-            <h2>The Challenge & Approach</h2>
-            <p>
-              The goal of this project was to explore structural color-blocking inspired by 1980s retro sportswear, focusing on panel joints and drape weights. This study maps how contrasting seams react when draped on active, moving avatars.
-            </p>
+        <!-- 2. Project Overview -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Project Overview</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); max-width: 80ch;">
+            The objective of this project was to explore advanced retro-inspired color-blocking techniques for a summer activewear collection. By mapping contrasting seams along the body's natural biomechanical lines, the design aims to minimize friction points while achieving a bold, structural aesthetic. The challenge was ensuring that lightweight, stretchy knits maintain their shape without puckering at complex intersecting seams.
+          </p>
+        </section>
+
+        <!-- 3. Objectives -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Core Objectives</h2>
+          <div class="objectives-grid">
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="objective-title">Structural Paneling</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
+              </div>
+              <h3 class="objective-title">Stretch & Recovery</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <h3 class="objective-title">Seam Minimization</h3>
+            </div>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="objective-title">Tech Pack Delivery</h3>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Design & Development Process -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Workflow & Process</h2>
+          <div class="workflow-timeline">
             
-            <h2>Creative Research & Color Mapping</h2>
-            <p>
-              I studied vintage windbreakers and track pants, digitizing traditional pattern layouts. Color schemes were carefully selected to represent retro aesthetics while fitting cleanly into a contemporary, premium context.
-            </p>
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">1. Reference & Line Mapping</h3>
+                <p class="workflow-desc">Studying vintage 80s sportswear and sketching biomechanical lines directly onto a 3D avatar.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">2. Pattern Slashing & Spreading</h3>
+                <p class="workflow-desc">Dividing a basic knit block into multiple color panels while maintaining overall garment measurements.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">3. Virtual Simulation</h3>
+                <p class="workflow-desc">Applying physical properties of cotton-spandex jersey in CLO3D to test seam puckering and stretch limitations.</p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg></div>
+              <div class="workflow-connector"></div>
+              <div class="workflow-content">
+                <h3 class="workflow-title">4. Grading & Factory Specs</h3>
+                <p class="workflow-desc">Creating precise graded rules for intersecting panels and detailing flatlock stitching requirements.</p>
+              </div>
+            </div>
             
-            <h2>3D Draping & Simulation</h2>
-            <p>
-              Using CLO3D's physical properties engine, different weights of nylon and cotton were simulated. Seam puckering and panel stretch tolerances were finely tuned to guarantee that the panels lay flat across physical production seams.
-            </p>
-
-            <h2>Outcome & Impact</h2>
-            <p>
-              The study successfully demonstrated how color block lines can be strategically placed along natural biomechanical lines, improving comfort while maintaining structural symmetry.
-            </p>
-          </div>
-
-          <div class="project-sidebar-card reveal" style="transition-delay: 0.2s;">
-            <h3>Key Deliverables</h3>
-            <ul>
-              <li>Colorblock pattern templates</li>
-              <li>CLO3D dynamic simulations</li>
-              <li>Detailed stitching & grading specs</li>
-              <li>CMYK/RGB color palette mappings</li>
-              <li>Fabric texture library packages</li>
-            </ul>
           </div>
         </section>
 
-        <!-- Gallery Grid -->
-        <section class="project-gallery-grid reveal-stagger">
-          <div class="gallery-img-container">
-            <img src="/src/assets/project-3.jpg" alt="Colorblock detail view 1" class="gallery-img" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/src/assets/project-3.jpg" alt="Colorblock detail view 2" class="gallery-img" style="filter: brightness(0.85);" />
+        <!-- 5. Gallery -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Design Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../src/assets/project-3.jpg" alt="T-Shirt Colorblock Front" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-3.jpg" alt="T-Shirt Colorblock Back" style="filter: brightness(0.9);" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-3.jpg" alt="Seam Detail Construction" style="filter: brightness(0.8);" />
+            </div>
+            <div class="gallery-item">
+              <img src="../src/assets/project-3.jpg" alt="Pattern Layout" style="filter: saturate(1.2);" />
+            </div>
           </div>
         </section>
+
+        <!-- 6. Technical Details -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Technical Details</h2>
+          <div class="tech-details-grid">
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Main Fabric</span>
+              <span class="tech-detail-value">95% Cotton, 5% Spandex Jersey</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Weight</span>
+              <span class="tech-detail-value">180 GSM</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Seam Finish</span>
+              <span class="tech-detail-value">4-Thread Overlock</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Topstitching</span>
+              <span class="tech-detail-value">Coverstitch (Flatlock visual)</span>
+            </div>
+            <div class="tech-detail-card">
+              <span class="tech-detail-label">Pattern Type</span>
+              <span class="tech-detail-value">Athletic Fit, Colorblock</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Challenges & Solutions -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Challenges & Solutions</h2>
+          <div class="challenge-solution-grid">
+            <div class="cs-card challenge">
+              <div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg></div>
+              <h3 class="cs-title">Challenge: Seam Puckering</h3>
+              <p class="workflow-desc">Combining multiple knit panels introduced a high risk of seam puckering and tension warping along curved joints, specifically around the shoulder and chest intersections during movement.</p>
+            </div>
+            <div class="cs-card solution">
+              <div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <h3 class="cs-title">Solution: Tension Balancing</h3>
+              <p class="workflow-desc">Adjusted pattern notch placements to ensure even fabric distribution. Specified differential feed settings for the overlock machines in the Tech Pack and simulated the relaxed state in CLO3D to verify a smooth drape.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Final Outcome -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Final Outcome</h2>
+          <ul class="outcome-checklist">
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Fully Graded Colorblock Templates
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Accurate 3D Fit Validations
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Complete Manufacturing Tech Pack
+            </li>
+            <li class="outcome-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              CMYK/RGB Color Fastness Specs
+            </li>
+          </ul>
+        </section>
+
+        <!-- 9. Lessons Learned -->
+        <section class="case-study-section reveal">
+          <h2 class="case-study-section-title">Lessons Learned</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+            Designing complex knits requires a profound understanding of stretch directionality. This case study highlighted the necessity of specifying differential machine feeds and tension settings directly in the Tech Pack, proving that successful design is inseparable from manufacturing knowledge.
+          </p>
+        </section>
+
+        <!-- 10. Related Projects -->
+        <section class="related-projects reveal">
+          <h2 class="case-study-section-title" style="text-align: center;" data-i18n="projectPage.related">Explore More Work</h2>
+          <div class="related-grid">
+            <a href="project-1.html" class="related-card">
+              <img src="../src/assets/project-1.jpg" alt="Thiết kế đầm dạ hội" />
+              <div class="related-overlay">
+                <span class="related-label" data-i18n="projectPage.next">Next Project</span>
+                <span class="related-title">Thiết kế đầm dạ hội</span>
+              </div>
+            </a>
+            <a href="project-2.html" class="related-card">
+              <img src="../src/assets/project-2.jpg" alt="Thiết kế áo jacket" />
+              <div class="related-overlay">
+                <span class="related-label" data-i18n="projectPage.prev">Previous Project</span>
+                <span class="related-title">Thiết kế áo jacket</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -163,22 +320,22 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <div class="footer-callout">
+          <div class="footer-callout" data-i18n="contact.title">
             Let's Build Something Meaningful Together.
           </div>
           <ul class="footer-links">
-            <li><a href="/" class="footer-link">Home</a></li>
-            <li><a href="/#about" class="footer-link">About</a></li>
-            <li><a href="/#projects" class="footer-link">Projects</a></li>
-            <li><a href="/#contact" class="footer-link">Contact</a></li>
+            <li><a href="/" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="/#about" class="footer-link" data-i18n="nav.about">About</a></li>
+            <li><a href="/#projects" class="footer-link" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-bottom">
-          <div>© 2026 TTN. All rights reserved.</div>
+          <div data-i18n="footer.rights">© 2026 TTN. All rights reserved.</div>
           <div style="display: flex; gap: 2rem;">
-            <a href="#" class="footer-link" style="text-transform: none;">Privacy Policy</a>
-            <a href="#" class="footer-link" style="text-transform: none;">Terms of Service</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.terms">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -186,5 +343,6 @@
 
     <!-- Entry Point JavaScript -->
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/i18n.js"></script>
   </body>
 </html>

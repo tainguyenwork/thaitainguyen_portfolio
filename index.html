@@ -48,15 +48,18 @@
         <a href="#" class="logo">TTN.</a>
         
         <ul class="nav-links">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#expertise" class="nav-link">Expertise</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#hero" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#expertise" class="nav-link" data-i18n="nav.expertise">Expertise</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
         
         <div class="nav-actions">
+          <!-- Language Switcher -->
+          <button class="lang-toggle" aria-label="Toggle Language">EN</button>
+          
           <!-- Light/Dark Mode Switcher -->
           <button class="theme-btn" aria-label="Toggle Theme">
             <!-- Moon Icon (Dark Mode active) -->
@@ -93,20 +96,20 @@
       <section id="hero" class="hero">
         <div class="container hero-grid">
           <div class="hero-content reveal">
-            <p class="hero-subtitle">Technical Designer | Garment Technology Graduate</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Technical Designer | Garment Technology Graduate</p>
             <h1 class="hero-title">
               Thai Tai<br />
               Nguyen
             </h1>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero.desc">
               Transforming fashion concepts into production-ready garments through Technical Design, Pattern Development, and 3D Garment Visualization.
             </p>
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">
                 View Projects
                 <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
-              <a href="./CV_NguyenThaiTai.pdf" download class="btn btn-secondary">
+              <a href="./CV_NguyenThaiTai.pdf" download class="btn btn-secondary" data-i18n="hero.downloadResume">
                 Download Resume
                 <svg viewBox="0 0 24 24" style="transform: none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
               </a>
@@ -132,14 +135,14 @@
       <section id="about" class="section-padding">
         <div class="container" style="max-width: 900px;">
           <div class="reveal">
-            <p class="section-meta">01 / Profile</p>
-            <h2 class="about-title-large" style="margin-bottom: 2.5rem;">About Me</h2>
+            <p class="section-meta" data-i18n="about.meta">01 / Profile</p>
+            <h2 class="about-title-large" style="margin-bottom: 2.5rem;" data-i18n="about.title">About Me</h2>
             
-            <p class="about-paragraph" style="font-size: 1.15rem; font-weight: 300; max-width: 80ch; line-height: 1.8; margin-bottom: 2rem;">
+            <p class="about-paragraph" style="font-size: 1.15rem; font-weight: 300; max-width: 80ch; line-height: 1.8; margin-bottom: 2rem;" data-i18n="about.p1">
               I am a <strong>Technical Designer</strong> and <strong>Garment Technology Graduate</strong> passionate about transforming creative concepts into production-ready garments. By combining technical pattern development with modern 3D garment simulation, I create accurate digital prototypes and detailed technical documentation that support efficient manufacturing and consistent garment quality.
             </p>
             
-            <p class="about-paragraph" style="font-size: 1.05rem; font-weight: 300; max-width: 80ch; line-height: 1.8; color: var(--text-secondary);">
+            <p class="about-paragraph" style="font-size: 1.05rem; font-weight: 300; max-width: 80ch; line-height: 1.8; color: var(--text-secondary);" data-i18n="about.p2">
               My expertise includes pattern making, Tech Pack development, pattern grading, and 3D garment visualization using industry-standard software. I strive to improve product development workflows, optimize material utilization, and ensure designs transition smoothly from concept to production.
             </p>
           </div>
@@ -149,8 +152,8 @@
       <!-- Core Expertise Section -->
       <section id="expertise" class="section-padding" style="border-top: 1px solid var(--border-color);">
         <div class="container">
-          <p class="section-meta">02 / Skills & Core Expertise</p>
-          <h2 class="section-title">Areas of Expertise</h2>
+          <p class="section-meta" data-i18n="expertise.meta">02 / Skills & Core Expertise</p>
+          <h2 class="section-title" data-i18n="expertise.title">Areas of Expertise</h2>
           
           <div class="expertise-grid reveal-stagger">
             <!-- Card 1: Technical Design -->
@@ -158,11 +161,11 @@
               <div class="expertise-card-icon">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               </div>
-              <h3 class="expertise-card-title">Technical Design</h3>
+              <h3 class="expertise-card-title" data-i18n="expertise.techDesign">Technical Design</h3>
               <ul class="expertise-card-list">
-                <li>Tech Pack Development</li>
-                <li>Bill of Materials (BOM)</li>
-                <li>Measurement Specification</li>
+                <li data-i18n="expertise.techPack">Tech Pack Development</li>
+                <li data-i18n="expertise.bom">Bill of Materials (BOM)</li>
+                <li data-i18n="expertise.measurement">Measurement Specification</li>
               </ul>
             </div>
             
@@ -171,11 +174,11 @@
               <div class="expertise-card-icon">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 3h12l4 6-10 12L2 9z"></path><path d="M11 3 8 9l4 12 4-12-3-6"></path><path d="M2 9h20"></path></svg>
               </div>
-              <h3 class="expertise-card-title">Pattern Development</h3>
+              <h3 class="expertise-card-title" data-i18n="expertise.patternDev">Pattern Development</h3>
               <ul class="expertise-card-list">
                 <li>Gerber AccuMark</li>
-                <li>Pattern Making</li>
-                <li>Size Grading & Fit</li>
+                <li data-i18n="expertise.patternMaking">Pattern Making</li>
+                <li data-i18n="expertise.sizeGrading">Size Grading & Fit</li>
               </ul>
             </div>
             
@@ -184,11 +187,11 @@
               <div class="expertise-card-icon">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
               </div>
-              <h3 class="expertise-card-title">3D Garment Dev</h3>
+              <h3 class="expertise-card-title" data-i18n="expertise.garmentDev">3D Garment Dev</h3>
               <ul class="expertise-card-list">
-                <li>CLO3D Virtual Fitting</li>
-                <li>Material Simulation</li>
-                <li>Digital Rendering</li>
+                <li data-i18n="expertise.virtualFitting">CLO3D Virtual Fitting</li>
+                <li data-i18n="expertise.materialSim">Material Simulation</li>
+                <li data-i18n="expertise.digitalRender">Digital Rendering</li>
               </ul>
             </div>
             
@@ -197,7 +200,7 @@
               <div class="expertise-card-icon">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
               </div>
-              <h3 class="expertise-card-title">Software Suite</h3>
+              <h3 class="expertise-card-title" data-i18n="expertise.software">Software Suite</h3>
               <ul class="expertise-card-list">
                 <li>Adobe Illustrator</li>
                 <li>Adobe Photoshop</li>
@@ -213,10 +216,10 @@
         <div class="container">
           <div class="portfolio-intro reveal">
             <div>
-              <p class="section-meta">03 / Selected Works</p>
-              <h2 class="section-title" style="margin-bottom: 0;">Featured Projects</h2>
+              <p class="section-meta" data-i18n="projects.meta">03 / Selected Works</p>
+              <h2 class="section-title" style="margin-bottom: 0;" data-i18n="projects.title">Featured Projects</h2>
             </div>
-            <p>Showcasing digital-first craftsmanship in technical construction, pattern grading, and 3D simulation.</p>
+            <p data-i18n="projects.desc">Showcasing digital-first craftsmanship in technical construction, pattern grading, and 3D simulation.</p>
           </div>
           
           <div class="projects-minimal-grid reveal-stagger">
@@ -226,14 +229,14 @@
                 <img src="/src/assets/project-1.jpg" alt="Thiết kế đầm dạ hội" class="project-minimal-img" loading="lazy" />
               </div>
               <div class="project-minimal-content">
-                <h3 class="project-minimal-title">Thiết kế đầm dạ hội</h3>
-                <p class="project-minimal-desc">Digital pattern construction and virtual fit assessment of a formal evening gown. Optimizing drape physics and seam tension in 3D.</p>
+                <h3 class="project-minimal-title" data-i18n="projects.p1_title">Thiết kế đầm dạ hội</h3>
+                <p class="project-minimal-desc" data-i18n="projects.p1_desc">Digital pattern construction and virtual fit assessment of a formal evening gown. Optimizing drape physics and seam tension in 3D.</p>
                 <div class="project-minimal-tags">
                   <span class="project-minimal-tag">CLO3D</span>
                   <span class="project-minimal-tag">Gerber AccuMark</span>
                   <span class="project-minimal-tag">3D Simulation</span>
                 </div>
-                <a href="/projects/project-1.html" class="project-minimal-btn">
+                <a href="/projects/project-1.html" class="project-minimal-btn" data-i18n="projects.viewProject">
                   View Project
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
@@ -246,14 +249,14 @@
                 <img src="/src/assets/project-2.jpg" alt="Thiết kế áo jacket" class="project-minimal-img" loading="lazy" />
               </div>
               <div class="project-minimal-content">
-                <h3 class="project-minimal-title">Thiết kế áo jacket</h3>
-                <p class="project-minimal-desc">Technical design development for a protective outerwear jacket. Specifying layered lining, pocket coordinates, and BOM sheet.</p>
+                <h3 class="project-minimal-title" data-i18n="projects.p2_title">Thiết kế áo jacket</h3>
+                <p class="project-minimal-desc" data-i18n="projects.p2_desc">Technical design development for a protective outerwear jacket. Specifying layered lining, pocket coordinates, and BOM sheet.</p>
                 <div class="project-minimal-tags">
                   <span class="project-minimal-tag">CLO3D</span>
                   <span class="project-minimal-tag">Tech Pack</span>
                   <span class="project-minimal-tag">Illustrator</span>
                 </div>
-                <a href="/projects/project-2.html" class="project-minimal-btn">
+                <a href="/projects/project-2.html" class="project-minimal-btn" data-i18n="projects.viewProject">
                   View Project
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
@@ -266,14 +269,14 @@
                 <img src="/src/assets/project-3.jpg" alt="Áo thun mùa hè" class="project-minimal-img" loading="lazy" />
               </div>
               <div class="project-minimal-content">
-                <h3 class="project-minimal-title">Áo thun mùa hè</h3>
-                <p class="project-minimal-desc">Casual summer t-shirt fit testing and automated size grading. Perfecting neckband height and drop-shoulder dimensions for bulk production.</p>
+                <h3 class="project-minimal-title" data-i18n="projects.p3_title">Áo thun mùa hè</h3>
+                <p class="project-minimal-desc" data-i18n="projects.p3_desc">Casual summer t-shirt fit testing and automated size grading. Perfecting neckband height and drop-shoulder dimensions for bulk production.</p>
                 <div class="project-minimal-tags">
                   <span class="project-minimal-tag">Pattern Grading</span>
                   <span class="project-minimal-tag">CLO3D</span>
                   <span class="project-minimal-tag">Figma</span>
                 </div>
-                <a href="/projects/project-3.html" class="project-minimal-btn">
+                <a href="/projects/project-3.html" class="project-minimal-btn" data-i18n="projects.viewProject">
                   View Project
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
@@ -289,8 +292,8 @@
       <section id="experience" class="section-padding" style="border-top: 1px solid var(--border-color);">
         <div class="container">
           <div class="reveal" style="text-align: center; margin-bottom: 5rem;">
-            <p class="section-meta">04 / Journey</p>
-            <h2 class="section-title" style="margin-bottom: 0;">Experience & Education</h2>
+            <p class="section-meta" data-i18n="experience.meta">04 / Journey</p>
+            <h2 class="section-title" style="margin-bottom: 0;" data-i18n="experience.title">Experience & Education</h2>
           </div>
           
           <div class="timeline-container reveal">
@@ -300,10 +303,10 @@
             <div class="timeline-item">
               <div class="timeline-badge"></div>
               <div class="timeline-content">
-                <div class="timeline-date">2025 - Present</div>
-                <h3 class="timeline-title">Technical Design Intern</h3>
-                <div class="timeline-subtitle">Apparel Production & Dev Co.</div>
-                <p class="timeline-desc">Assisting in pattern construction and grading. Translating design flats into high-fidelity 3D models using CLO3D, generating fit logs, and building comprehensive Tech Packs (POM, BOM) for production runs.</p>
+                <div class="timeline-date" data-i18n="experience.date1">2025 - Present</div>
+                <h3 class="timeline-title" data-i18n="experience.jobTitle">Technical Design Intern</h3>
+                <div class="timeline-subtitle" data-i18n="experience.company">Apparel Production & Dev Co.</div>
+                <p class="timeline-desc" data-i18n="experience.jobDesc">Assisting in pattern construction and grading. Translating design flats into high-fidelity 3D models using CLO3D, generating fit logs, and building comprehensive Tech Packs (POM, BOM) for production runs.</p>
               </div>
             </div>
             
@@ -311,10 +314,10 @@
             <div class="timeline-item">
               <div class="timeline-badge"></div>
               <div class="timeline-content">
-                <div class="timeline-date">2021 - 2025</div>
-                <h3 class="timeline-title">Bachelor in Garment Technology</h3>
-                <div class="timeline-subtitle">Technical University of Garment & Fashion</div>
-                <p class="timeline-desc">Specialized in pattern construction, Gerber AccuMark systems, and apparel manufacturing engineering. Focused graduation project on digital material physics and virtual pattern fit assessment.</p>
+                <div class="timeline-date" data-i18n="experience.date2">2021 - 2025</div>
+                <h3 class="timeline-title" data-i18n="experience.eduTitle">Bachelor in Garment Technology</h3>
+                <div class="timeline-subtitle" data-i18n="experience.university">Technical University of Garment & Fashion</div>
+                <p class="timeline-desc" data-i18n="experience.eduDesc">Specialized in pattern construction, Gerber AccuMark systems, and apparel manufacturing engineering. Focused graduation project on digital material physics and virtual pattern fit assessment.</p>
               </div>
             </div>
           </div>
@@ -325,16 +328,16 @@
       <section id="contact" class="section-padding">
         <div class="container">
           <div class="cta-centered reveal">
-            <p class="section-meta" style="margin-bottom: 2rem;">05 / Collaboration</p>
-            <h2 class="cta-heading">Let's Build Better Garments Together.</h2>
+            <p class="section-meta" style="margin-bottom: 2rem;" data-i18n="contact.meta">05 / Collaboration</p>
+            <h2 class="cta-heading" data-i18n="contact.title">Let's Build Better Garments Together.</h2>
             
-            <a href="mailto:nguyenthaitai.work@gmail.com" class="btn btn-primary btn-email-cta cta-button" aria-label="Contact Me">
+            <a href="mailto:nguyenthaitai.work@gmail.com" class="btn btn-primary btn-email-cta cta-button" aria-label="Contact Me" data-i18n="contact.btn">
               Contact Me
               <svg viewBox="0 0 24 24" class="btn-arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
             
             <div class="contact-editorial-secondary" style="margin-top: 5rem; text-align: center; justify-content: center; align-items: center;">
-              <span class="secondary-label">Connect elsewhere</span>
+              <span class="secondary-label" data-i18n="contact.connect">Connect elsewhere</span>
               <div class="secondary-links" style="justify-content: center;">
                 <a href="mailto:nguyenthaitai.work@gmail.com" class="secondary-text-link">Email</a>
                 <span class="secondary-separator">/</span>
@@ -352,24 +355,24 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <div class="footer-callout">
+          <div class="footer-callout" data-i18n="contact.title">
             Let's Build Better Garments Together.
           </div>
           <ul class="footer-links">
-            <li><a href="#hero" class="footer-link">Home</a></li>
-            <li><a href="#about" class="footer-link">About</a></li>
-            <li><a href="#expertise" class="footer-link">Expertise</a></li>
-            <li><a href="#projects" class="footer-link">Projects</a></li>
-            <li><a href="#experience" class="footer-link">Experience</a></li>
-            <li><a href="#contact" class="footer-link">Contact</a></li>
+            <li><a href="#hero" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="footer-link" data-i18n="nav.about">About</a></li>
+            <li><a href="#expertise" class="footer-link" data-i18n="nav.expertise">Expertise</a></li>
+            <li><a href="#projects" class="footer-link" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#experience" class="footer-link" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-bottom">
-          <div>© 2026 TTN. All rights reserved.</div>
+          <div data-i18n="footer.rights">© 2026 TTN. All rights reserved.</div>
           <div style="display: flex; gap: 2rem;">
-            <a href="#" class="footer-link" style="text-transform: none;">Privacy Policy</a>
-            <a href="#" class="footer-link" style="text-transform: none;">Terms of Service</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#" class="footer-link" style="text-transform: none;" data-i18n="footer.terms">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -377,5 +380,6 @@
 
     <!-- Entry Point JavaScript -->
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/i18n.js"></script>
   </body>
 </html>

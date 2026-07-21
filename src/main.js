@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenuMobile();
   initCounters();
   initContactForm();
+  initLightbox();
 });
 
 /* ==========================================================================
@@ -69,16 +70,6 @@ let revealElements = [];
 function initScrollEffects() {
   const progressBar = document.querySelector('.scroll-progress-bar');
   
-  // Update scroll progress bar
-  window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    if (progressBar) {
-      progressBar.style.width = scrolled + '%';
-    }
-  });
-
   // Scroll reveal setup
   revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
   
@@ -91,8 +82,6 @@ function initScrollEffects() {
     });
   });
 
-  window.addEventListener('scroll', triggerScrollReveal);
-  
   // Skill bar animation reveal
   const skillSection = document.querySelector('.skills-grid');
   if (skillSection) {
@@ -116,36 +105,59 @@ function initScrollEffects() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
   
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    let currentId = '';
-    const scrollPosition = window.scrollY + 150;
-    
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        currentId = section.getAttribute('id');
-      }
-    });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        // Update scroll progress bar
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (progressBar) {
+          progressBar.style.width = scrolled + '%';
+        }
 
-    navLinks.forEach((link) => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentId}` || (link.getAttribute('href') === '/' && !currentId)) {
-        link.classList.add('active');
-      }
-    });
+        // Active navigation links
+        let currentId = '';
+        const scrollPosition = window.scrollY + 150;
+        
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentId}` || (link.getAttribute('href') === '/' && !currentId)) {
+            link.classList.add('active');
+          }
+        });
+
+        triggerScrollReveal();
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 }
 
 function triggerScrollReveal() {
   const triggerBottom = window.innerHeight * 0.85;
+  const elsToReveal = [];
   
   revealElements.forEach((el) => {
-    const box = el.getBoundingClientRect();
-    if (box.top < triggerBottom) {
-      el.classList.add('active');
+    if (!el.classList.contains('active')) {
+      const box = el.getBoundingClientRect();
+      if (box.top < triggerBottom) {
+        elsToReveal.push(el);
+      }
     }
   });
+  
+  elsToReveal.forEach(el => el.classList.add('active'));
 }
 
 // Global expose
@@ -239,5 +251,61 @@ function initContactForm() {
     
     // Open standard email client
     window.location.href = `mailto:nguyenthaitai.work@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
+
+/* ==========================================================================
+   8. Lightbox for Case Study Galleries
+   ========================================================================== */
+function initLightbox() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  if (galleryItems.length === 0) return;
+
+  // Create lightbox markup
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Close Lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <img class="lightbox-img" src="" alt="Lightbox View" />
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  // Open Lightbox
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // Close Lightbox
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
   });
 }
