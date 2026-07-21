@@ -57,7 +57,7 @@ const translations = {
       jobDesc: "Assisting in pattern construction and grading. Translating design flats into high-fidelity 3D models using CLO3D, generating fit logs, and building comprehensive Tech Packs (POM, BOM) for production runs.",
       date2: "2022 - 2026",
       eduTitle: "Garment Technology",
-      university: "Faculty of Mechanical Engineering",
+      university: "Faculty of Mechanical Engineering — HCMUT (VNU-HCM)",
       eduDesc: "Graduation Thesis: Developed a multifunctional womenswear collection inspired by Đông Sơn motifs, integrating Technical Design, Pattern Development, and CLO3D simulation."
     },
     contact: {
@@ -228,7 +228,7 @@ const translations = {
       jobDesc: "Hỗ trợ thiết kế và nhảy size rập. Chuyển đổi bản vẽ phác thảo thành mô hình 3D chân thực bằng CLO3D, tạo nhật ký phom dáng và xây dựng Tech Pack hoàn chỉnh (POM, BOM) phục vụ sản xuất.",
       date2: "2022 - 2026",
       eduTitle: "Công Nghệ Dệt May",
-      university: "Khoa Cơ Khí",
+      university: "Khoa Cơ Khí - Trường Đại học Bách khoa - ĐHQG-HCM",
       eduDesc: "Đồ án tốt nghiệp: Phát triển bộ sưu tập thời trang nữ đa năng lấy cảm hứng từ hoa văn Đông Sơn, kết hợp Thiết Kế Kỹ Thuật, Phát Triển Rập và mô phỏng CLO3D."
     },
     contact: {
