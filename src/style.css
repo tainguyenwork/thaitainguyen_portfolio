@@ -1901,6 +1901,7 @@ textarea.form-input {
 }
 
 .project-minimal-img-container {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
