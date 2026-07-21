@@ -34,7 +34,8 @@ const translations = {
       virtualFitting: "CLO3D Virtual Fitting",
       materialSim: "Material Simulation",
       digitalRender: "Digital Rendering",
-      software: "Software Suite"
+      software: "Software & Applications",
+      adobeSoftware: "Adobe Software (Illustrator, Photoshop)"
     },
     projects: {
       meta: "03 / Selected Works",
@@ -256,7 +257,8 @@ const translations = {
       virtualFitting: "Khớp Phom Ảo CLO3D",
       materialSim: "Mô Phỏng Chất Liệu",
       digitalRender: "Kết Xuất Số (Render)",
-      software: "Phần Mềm Ứng Dụng"
+      software: "Phần Mềm & Ứng Dụng",
+      adobeSoftware: "Phần mềm Adobe (Illustrator, Photoshop)"
     },
     projects: {
       meta: "03 / Tác Phẩm Tiêu Biểu",
