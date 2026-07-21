@@ -58,7 +58,7 @@ const translations = {
       date2: "2022 - 2026",
       eduTitle: "Garment Technology",
       university: "Faculty of Mechanical Engineering",
-      eduDesc: "Specialized in pattern construction, Gerber AccuMark systems, and apparel manufacturing engineering. Focused graduation project on digital material physics and virtual pattern fit assessment."
+      eduDesc: "Graduation Thesis: Developed a multifunctional womenswear collection inspired by Đông Sơn motifs, integrating Technical Design, Pattern Development, and CLO3D simulation."
     },
     contact: {
       meta: "05 / Collaboration",
@@ -229,7 +229,7 @@ const translations = {
       date2: "2022 - 2026",
       eduTitle: "Công Nghệ Dệt May",
       university: "Khoa Cơ Khí",
-      eduDesc: "Chuyên ngành thiết kế rập, hệ thống Gerber AccuMark và kỹ thuật sản xuất may mặc. Đồ án tốt nghiệp tập trung vào vật lý chất liệu kỹ thuật số và đánh giá phom dáng rập ảo."
+      eduDesc: "Đồ án tốt nghiệp: Phát triển bộ sưu tập thời trang nữ đa năng lấy cảm hứng từ hoa văn Đông Sơn, kết hợp Thiết Kế Kỹ Thuật, Phát Triển Rập và mô phỏng CLO3D."
     },
     contact: {
       meta: "05 / Hợp Tác",
