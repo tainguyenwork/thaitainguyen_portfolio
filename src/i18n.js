@@ -55,9 +55,9 @@ const translations = {
       jobTitle: "Technical Design Intern",
       company: "Apparel Production & Dev Co.",
       jobDesc: "Assisting in pattern construction and grading. Translating design flats into high-fidelity 3D models using CLO3D, generating fit logs, and building comprehensive Tech Packs (POM, BOM) for production runs.",
-      date2: "2021 - 2025",
-      eduTitle: "Bachelor in Garment Technology",
-      university: "Technical University of Garment & Fashion",
+      date2: "2022 - 2026",
+      eduTitle: "Garment Technology",
+      university: "Faculty of Mechanical Engineering",
       eduDesc: "Specialized in pattern construction, Gerber AccuMark systems, and apparel manufacturing engineering. Focused graduation project on digital material physics and virtual pattern fit assessment."
     },
     contact: {
@@ -226,9 +226,9 @@ const translations = {
       jobTitle: "Thực Tập Sinh Thiết Kế Kỹ Thuật",
       company: "Công Ty Phát Triển & Sản Xuất May Mặc",
       jobDesc: "Hỗ trợ thiết kế và nhảy size rập. Chuyển đổi bản vẽ phác thảo thành mô hình 3D chân thực bằng CLO3D, tạo nhật ký phom dáng và xây dựng Tech Pack hoàn chỉnh (POM, BOM) phục vụ sản xuất.",
-      date2: "2021 - 2025",
-      eduTitle: "Cử Nhân Công Nghệ May",
-      university: "Đại học Công Nghệ Dệt May",
+      date2: "2022 - 2026",
+      eduTitle: "Công Nghệ Dệt May",
+      university: "Khoa Cơ Khí",
       eduDesc: "Chuyên ngành thiết kế rập, hệ thống Gerber AccuMark và kỹ thuật sản xuất may mặc. Đồ án tốt nghiệp tập trung vào vật lý chất liệu kỹ thuật số và đánh giá phom dáng rập ảo."
     },
     contact: {
