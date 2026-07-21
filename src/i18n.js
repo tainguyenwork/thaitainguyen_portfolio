@@ -46,7 +46,9 @@ const translations = {
       p2_title: "Jacket Design",
       p2_desc: "Technical design development for a protective outerwear jacket. Specifying layered lining, pocket coordinates, and BOM sheet.",
       p3_title: "Summer T-Shirt",
-      p3_desc: "Casual summer t-shirt fit testing and automated size grading. Perfecting neckband height and drop-shoulder dimensions for bulk production."
+      p3_desc: "Casual summer t-shirt fit testing and automated size grading. Perfecting neckband height and drop-shoulder dimensions for bulk production.",
+      p4_title: "Bridgerton Regency Gown",
+      p4_desc: "Recreating an iconic Regency empire-waist gown inspired by Bridgerton. Featuring sheer lace sleeves, floral embroidery, and CLO3D drape physics."
     },
     experience: {
       meta: "04 / Journey",
@@ -168,6 +170,32 @@ const translations = {
       out3: "Complete Manufacturing Tech Pack",
       out4: "CMYK/RGB Color Fastness Specs",
       lessonsDesc: "Designing complex knits requires a profound understanding of stretch directionality. This case study highlighted the necessity of specifying differential machine feeds and tension settings directly in the Tech Pack, proving that successful design is inseparable from manufacturing knowledge."
+    },
+    project4: {
+      title: "Bridgerton Regency Gown",
+      summary: "Recreating the iconic 19th-century Regency empire-waist silhouette from Bridgerton. Integrating delicate floral embroidery, sheer organza sleeves, and precise 3D drape physics in CLO3D.",
+      overviewDesc: "Inspired by the elegance of Daphne Bridgerton's wardrobe, this project recreates an empire-waist Regency gown with modern digital pattern engineering. The design combines a structured square-neck bodice, delicate puffed sheer sleeves with lace embroidery, and a floor-length A-line silk skirt to achieve authentic historical draping without physical fabric waste.",
+      obj1: "Empire Waist Patterning",
+      obj2: "Sheer Lace & Organza Mapping",
+      obj3: "Embroidery Tech Pack",
+      obj4: "Photorealistic 3D Simulation",
+      wf1_title: "1. Regency Silhouette Research",
+      wf1_desc: "Studying early 19th-century corsetry, high-waisted seam placements, and Regency dress construction.",
+      wf2_title: "2. Pattern Block Construction",
+      wf2_desc: "Drafting the fitted square-neck bodice, delicate puff sleeve caps, and gathered back skirt panels in Gerber Accumark.",
+      wf3_title: "3. CLO3D Material Physics & Rendering",
+      wf3_desc: "Simulating powder-blue silk satin and transparent organza lace textures to achieve natural drape and subtle sheen.",
+      wf4_title: "4. Tech Pack & Embroidery Specs",
+      wf4_desc: "Building a full Tech Pack specifying lace placement, pearl bead embellishments, and zipper/closure specifications.",
+      challengeTitle: "Challenge: Sheer Fabric Simulation & Bodice Structure",
+      challengeDesc: "Simulating thin, transparent organza layers over a fitted empire bodice in 3D caused mesh clipping and unrealistic stiffness at the armhole gathering.",
+      solutionTitle: "Solution: Multi-layer Mesh Tuning & Internal Piping",
+      solutionDesc: "Adjusted CLO3D collision thickness to 0.5mm, added internal piping lines at the under-bust seam for structural support, and calibrated custom organza bending properties for delicate sleeve puffs.",
+      out1: "Historical Regency Pattern DXF",
+      out2: "High-Fidelity CLO3D 3D Simulation",
+      out3: "Complete Embroidery & Trim Tech Pack",
+      out4: "Zero-Waste Couture Prototyping",
+      lessonsDesc: "Blending period costume history with 3D digital technology requires deep attention to historical seam placement. By accurately mapping the high empire waist and delicate sleeve gathers in 3D, this project proved that classic historical silhouettes can be efficiently engineered for modern couture production."
     }
   },
   vn: {
@@ -217,7 +245,9 @@ const translations = {
       p2_title: "Thiết Kế Áo Jacket",
       p2_desc: "Phát triển thiết kế kỹ thuật cho áo khoác ngoài. Chi tiết hóa lớp lót, toạ độ túi và bảng định mức BOM.",
       p3_title: "Áo Thun Mùa Hè",
-      p3_desc: "Đánh giá phom dáng và nhảy size tự động cho áo thun mùa hè. Hoàn thiện độ cao viền cổ và kích thước hạ vai cho sản xuất hàng loạt."
+      p3_desc: "Đánh giá phom dáng và nhảy size tự động cho áo thun mùa hè. Hoàn thiện độ cao viền cổ và kích thước hạ vai cho sản xuất hàng loạt.",
+      p4_title: "Đầm Dạ Hội Bridgerton",
+      p4_desc: "Phát triển phom đầm dạ hội thắt eo cao chuẩn thời kỳ Regency lấy cảm hứng từ phim Bridgerton. Kết hợp tay voan ren, thêu hoa li ti và mô phỏng 3D CLO3D."
     },
     experience: {
       meta: "04 / Hành Trình",
@@ -339,6 +369,32 @@ const translations = {
       out3: "Tech Pack Sản Xuất Đầy Đủ",
       out4: "Thông Số Độ Bền Màu CMYK/RGB",
       lessonsDesc: "Thiết kế đồ thun phức tạp đòi hỏi sự hiểu biết sâu sắc về hướng co giãn của vải. Dự án nhấn mạnh tầm quan trọng của việc quy định thông số vi sai máy may trực tiếp trong Tech Pack."
+    },
+    project4: {
+      title: "Đầm Dạ Hội Bridgerton",
+      summary: "Tái hiện phom dáng đầm thắt eo cao (empire waist) phong cách Regency thế kỷ 19 kinh điển từ phim Bridgerton. Kết hợp họa tiết thêu hoa tinh tế, tay voan ren xuyên thấu và mô phỏng vật lý 3D trong CLO3D.",
+      overviewDesc: "Lấy cảm hứng từ nét thanh lịch trong tủ đồ của Daphne Bridgerton, dự án này tái hiện chiếc đầm dạ hội thời kỳ Regency với kỹ thuật dựng rập số hiện đại. Thiết kế kết hợp giữa thân trên cổ vuông cứng cáp, tay phồng voan mỏng thêu ren và chân váy lụa dáng xòe A dài chạm đất để đạt được độ rủ lịch sử chân thực mà không lãng phí vải.",
+      obj1: "Dựng Rập Thắt Eo Cao (Empire)",
+      obj2: "Mô Phỏng Vải Voan & Ren Xuyên Thấu",
+      obj3: "Tech Pack Chi Tiết Thêu Hoa",
+      obj4: "Mô Phỏng 3D Chân Thực",
+      wf1_title: "1. Nghiên Cứu Phom Dáng Regency",
+      wf1_desc: "Tìm hiểu cấu trúc áo corset đầu thế kỷ 19, đường cắt đường eo cao và kỹ thuật may đầm thời kỳ Regency.",
+      wf2_title: "2. Thiết Kế Rập Khối",
+      wf2_desc: "Dựng rập thân trên cổ vuông ôm sát, đầu tay phồng tinh tế và mảng nhún váy sau trên Gerber Accumark.",
+      wf3_title: "3. Vật Lý Chất Liệu & Render CLO3D",
+      wf3_desc: "Mô phỏng chất liệu lụa satin xanh lam nhạt và voan tơ thêu ren để đạt độ rủ tự nhiên cùng độ bóng nhẹ.",
+      wf4_title: "4. Tech Pack & Thông Số Thêu Hạt",
+      wf4_desc: "Xây dựng Tech Pack hoàn chỉnh quy định vị trí đính ren, hạt ngọc trai và thông số khóa kéo.",
+      challengeTitle: "Thách Thức: Mô Phỏng Vải Voan & Cấu Trúc Áo Thân Trên",
+      challengeDesc: "Mô phỏng các lớp voan mỏng xuyên thấu đè lên thân áo corset dựng phom trong 3D gây hiện tượng vỡ lưới vải và nhăn nhúm không tự nhiên ở vòng nách.",
+      solutionTitle: "Giải Pháp: Tối Ưu Lưới Đa Lớp & Viền Tăng Cường Nội Bộ",
+      solutionDesc: "Điều chỉnh khoảng cách va chạm trong CLO3D xuống 0.5mm, thêm các đường viền định hình chân ngực để hỗ trợ cấu trúc và hiệu chuẩn độ uốn cong riêng cho tay áo phồng.",
+      out1: "File Rập Chuẩn Phong Cách Regency DXF",
+      out2: "Mô Phỏng 3D CLO3D Chân Thực",
+      out3: "Bộ Tech Pack Chi Tiết Thêu & Phụ Liệu",
+      out4: "May Mẫu Ảo Không Rác Thải",
+      lessonsDesc: "Kết hợp lịch sử trang phục cổ điển với công nghệ kỹ thuật số 3D đòi hỏi sự chú ý tỉ mỉ đến từng đường cắt rập. Bằng cách định vị chính xác đường thắt eo cao và các nếp nhún tay áo trong 3D, dự án chứng minh phom dáng lịch sử hoàn toàn có thể được hiện đại hóa hiệu quả cho dòng thời trang cao cấp."
     }
   }
 };
