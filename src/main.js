@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initContactForm();
   initLightbox();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -136,11 +137,33 @@ function initScrollEffects() {
           }
         });
 
+        // Back to top button visibility
+        const backToTopBtn = document.querySelector('.back-to-top');
+        if (backToTopBtn) {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add('active');
+          } else {
+            backToTopBtn.classList.remove('active');
+          }
+        }
+
         triggerScrollReveal();
         ticking = false;
       });
       ticking = true;
     }
+  });
+}
+
+function initBackToTop() {
+  const backBtn = document.querySelector('.back-to-top');
+  if (!backBtn) return;
+
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 }
 
